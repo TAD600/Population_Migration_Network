@@ -1,0 +1,39 @@
+---
+title: "Raw Ddata"
+author: "Tahia Anan Dhira"
+date: "2026-02-06"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Datasets in the `../data/cleaned` folder: 
+`attributes.csv`: Country level panel data with different development indicators
+`bilateral_migration.csv`: Cleaned bilateral migration data for the time span of 1990 to 2020
+`panel_migration.csv`: Complete bilateral panel data for statistical analysis. This data set is larger than 2GB, hence, couldn't be uploaded to this repository. However, running the `01_preparing` notebook constructs and saves all three of these datsets in the cleaned subfolder of the data folder.
+
+
+
+Datasets in the `../data/raw` folder: 
+`1b88092e-3767-472c-943e-c094fe6c827b_Series - Metadata.csv`: Mortality rate, infant (per 1000 live births)
+`11606a24-87be-4d81-92b2-a318c1453d9d_Series - Metadata.csv`: GDP per capita (constant 2015 US$)
+`b6d35734-229f-4801-b42a-ef191a199de3_Series - Metadata.csv`: School enrollment, primary (% net)
+`ef17b06f-2530-4235-9d0b-48728c3f92d9_Series - Metadata.csv`: GDP per capita growth (annual %)
+`cross-country-literacy-rates.csv`: Literacy rates
+`economic-inequality-gini-index.csv`: GINI index
+`government-effectiveness-vs-electoral-democracy-index.csv`: Government effectiveness index and 
+                                                             electoral democracy index
+`migration_imputed_RIKS_dec2021.csv`: Bilateral migration data. This dataset is larger than 2GB and couldn't be uploaded to this repository. Reproduction of the cleaned datasets requires downloading this dataset from the link- https://data.mendeley.com/datasets/cpt3nh6jct/1 and storing it in the `../data/raw` folder
+`political-corruption-index.csv`: Political corruption index
+`hdr_data.xlsx`: Gender Inequality index
+`hdr_data (1).xlsx`: Female labour force participation
+`hdr_data (2).xlsx`: Share of seats for female members in parliament
+`hdr_data (3).xlsx`: Human Development Index
+`hdr_data (4).xlsx`: Life expectancy
+`hdr_data (5).xlsx`: Mean years of schooling
+`hdr_data (6).xlsx`: Coefficient of human inequality
+`hdr_data (7).xlsx`: Inequality in eduation
+`hdr_data (8).xlsx`: Inequality in income
+`hdr_data (9).xlsx`: Inequality in life expectancy
