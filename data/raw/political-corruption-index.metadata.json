@@ -1,0 +1,57 @@
+{
+  "chart": {
+    "title": "Political Corruption Index",
+    "subtitle": "Data by [V-Dem](#dod:v-dem). Expert estimates of the extent to which the executive, legislative, judiciary, and bureaucracy engage in bribery and theft, and the making and implementation of laws are susceptible to corruption. The index ranges from 0 to 1 (highly corrupt).",
+    "citation": "V-Dem (2025)",
+    "originalChartUrl": "https://ourworldindata.org/grapher/political-corruption-index?v=1&csvType=full&useColumnShortNames=false",
+    "selection": [
+      "World",
+      "Argentina",
+      "Australia",
+      "Botswana",
+      "China"
+    ]
+  },
+  "columns": {
+    "Political corruption index (central estimate)": {
+      "titleShort": "Political Corruption Index",
+      "titleLong": "Political Corruption Index - V-Dem",
+      "descriptionShort": "Central estimate of the extent to which a country is affected by political corruption.",
+      "descriptionKey": [
+        "This index, produced by Varieties of Democracy (V-Dem), is useful if you are interested in bribery and embezzlement, especially at high levels, want scores for almost all countries, or are also interested in corruption in the more distant past. For data that focuses on people's or firms' everyday experiences and perceptions of corruption, other sources will be more useful. You can explore these alternatives on our [Corruption topic page](https://ourworldindata.org/corruption).",
+        "The index is based on assessments by V-Dem's country experts.",
+        "Experts can be biased because they may rely on limited networks, be influenced by media narratives, or bring in their own political views. At the same time, they often draw on broader knowledge, follow national politics closely, monitor the media, speak with insiders in government and civil society, and some conduct direct investigations.",
+        "It is made up of four sub-indices: [executive corruption](https://ourworldindata.org/grapher/executive-corruption-index), [legislative corruption](https://ourworldindata.org/grapher/legislative-corruption-score), [judicial corruption](https://ourworldindata.org/grapher/judicial-corruption-score), and [public sector corruption](https://ourworldindata.org/grapher/public-sector-corruption-index).",
+        "V-Dem covers many more countries since 1900, which affects regional averages.",
+        "We provide two kinds of regional averages: **country averages** and **population-weighted averages**. Country averages weigh each country equally and give a sense of how the typical country is doing. Population-weighted averages weigh countries with larger populations more and therefore better reflect the average person's experience."
+      ],
+      "descriptionProcessing": "### Region aggregates\nThe default regional aggregates have been estimated by averaging the country values. These are only estimated since 1900 and when data for most countries and populations is available (i.e. 70% for most continents). We have used the list of countries in 1900 as a reference.\n\nIn addition, regional aggregates with names like \"Region (population-weighted)\" have been estimated by averaging the country values weighted by population. The population values are from the UN WPP 2024 revision dataset. These are only estimated when 70% of people in region have data for the given year.",
+      "unit": "",
+      "timespan": "1789-2024",
+      "type": "Numeric",
+      "owidVariableId": 1034547,
+      "shortName": "corruption_vdem__estimate_best",
+      "lastUpdated": "2025-03-17",
+      "nextUpdate": "2026-03-17",
+      "citationShort": "V-Dem (2025) – processed by Our World in Data",
+      "citationLong": "V-Dem (2025) – processed by Our World in Data. “Political Corruption Index – V-Dem” [dataset]. V-Dem, “Democracy report v15” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/1034547.metadata.json"
+    },
+    "World region according to OWID": {
+      "titleShort": "World region according to OWID",
+      "titleLong": "World region according to OWID",
+      "descriptionShort": "Regions defined by Our World in Data, which are used in OWID charts and maps.",
+      "unit": "",
+      "timespan": "2023-2023",
+      "type": "Continent",
+      "owidVariableId": 900801,
+      "shortName": "owid_region",
+      "lastUpdated": "2023-01-01",
+      "citationShort": "Our World in Data – processed by Our World in Data",
+      "citationLong": "Our World in Data – processed by Our World in Data. “World region according to OWID” [dataset]. Our World in Data, “Regions” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/900801.metadata.json"
+    }
+  },
+  "dateDownloaded": "2026-02-06",
+  "activeFilters": {}
+}

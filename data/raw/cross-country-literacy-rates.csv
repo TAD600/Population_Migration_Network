@@ -1,0 +1,2060 @@
+Entity,Code,Year,Literacy rate
+Afghanistan,AFG,1950,3
+Afghanistan,AFG,1979,18
+Afghanistan,AFG,2011,31
+Afghanistan,AFG,2015,33.75384
+Afghanistan,AFG,2021,37
+Albania,ALB,1950,72.5
+Albania,ALB,2001,99
+Albania,ALB,2008,96
+Albania,ALB,2011,97
+Albania,ALB,2012,97
+Albania,ALB,2017,98.81623
+Algeria,DZA,1950,17.5
+Algeria,DZA,1987,50
+Algeria,DZA,2002,70
+Algeria,DZA,2006,73
+Algeria,DZA,2008,75
+American Samoa,ASM,1950,96.5
+American Samoa,ASM,1980,97
+Andorra,AND,1950,82.5
+Angola,AGO,1950,3
+Angola,AGO,2001,67
+Angola,AGO,2014,66
+Angola,AGO,2015,66.23586
+Anguilla,AIA,1984,95
+Antigua and Barbuda,ATG,1950,82.5
+Antigua and Barbuda,ATG,2001,99
+Argentina,ARG,1914,64.9
+Argentina,ARG,1947,86.4
+Argentina,ARG,1950,87.5
+Argentina,ARG,1980,94
+Argentina,ARG,1991,96
+Argentina,ARG,2001,97
+Armenia,ARM,1989,99
+Armenia,ARM,2001,99
+Armenia,ARM,2011,100
+Armenia,ARM,2016,100
+Armenia,ARM,2017,100
+Armenia,ARM,2020,100
+Armenia,ARM,2022,99.825
+Aruba,ABW,2000,97
+Aruba,ABW,2010,97
+Australia,AUS,1950,98.5
+Austria,AUT,1950,98.5
+Azerbaijan,AZE,1999,99
+Azerbaijan,AZE,2007,100
+Azerbaijan,AZE,2009,100
+Azerbaijan,AZE,2010,100
+Azerbaijan,AZE,2011,100
+Azerbaijan,AZE,2012,100
+Azerbaijan,AZE,2013,100
+Azerbaijan,AZE,2014,100
+Azerbaijan,AZE,2015,100
+Azerbaijan,AZE,2016,100
+Azerbaijan,AZE,2017,100
+Azerbaijan,AZE,2019,100
+Azerbaijan,AZE,2023,100
+Bahamas,BHS,1950,77.5
+Bahrain,BHR,1950,12.5
+Bahrain,BHR,1981,70
+Bahrain,BHR,1991,84
+Bahrain,BHR,2001,87
+Bahrain,BHR,2022,98
+Bahrain,BHR,2023,98
+Bangladesh,BGD,1981,29
+Bangladesh,BGD,1991,35
+Bangladesh,BGD,2001,47
+Bangladesh,BGD,2011,59
+Bangladesh,BGD,2012,58
+Bangladesh,BGD,2013,61
+Bangladesh,BGD,2014,61
+Bangladesh,BGD,2015,65
+Bangladesh,BGD,2016,73
+Bangladesh,BGD,2017,73
+Bangladesh,BGD,2018,74
+Bangladesh,BGD,2019,75
+Bangladesh,BGD,2020,75
+Bangladesh,BGD,2021,76
+Bangladesh,BGD,2022,79
+Barbados,BRB,1950,92.5
+Barbados,BRB,1970,99
+Belarus,BLR,1989,98
+Belarus,BLR,1999,100
+Belarus,BLR,2009,100
+Belarus,BLR,2019,100
+Belgium,BEL,1475,10
+Belgium,BEL,1550,17
+Belgium,BEL,1650,25
+Belgium,BEL,1750,13
+Belgium,BEL,1900,80.4
+Belgium,BEL,1910,86.6
+Belgium,BEL,1920,92.2
+Belgium,BEL,1930,94.1
+Belgium,BEL,1950,96.5
+Belize,BLZ,1950,77.5
+Belize,BLZ,1991,70
+Belize,BLZ,2015,90.91604
+Benin,BEN,1979,16
+Benin,BEN,1992,27
+Benin,BEN,2002,35
+Benin,BEN,2017,38.87121
+Benin,BEN,2019,48.99828
+Benin,BEN,2021,43.83417
+Benin,BEN,2022,51.37877
+Bermuda,BMU,1950,96.5
+Bhutan,BTN,1950,3
+Bhutan,BTN,2005,53
+Bhutan,BTN,2012,55
+Bhutan,BTN,2017,67
+Bolivia,BOL,1950,32.5
+Bolivia,BOL,1976,63
+Bolivia,BOL,1992,80
+Bolivia,BOL,2001,87
+Bolivia,BOL,2007,91
+Bolivia,BOL,2008,91
+Bolivia,BOL,2009,91
+Bolivia,BOL,2011,92
+Bolivia,BOL,2012,94
+Bolivia,BOL,2015,92
+Bolivia,BOL,2020,94
+Bosnia and Herzegovina,BIH,1991,89
+Bosnia and Herzegovina,BIH,2000,97
+Bosnia and Herzegovina,BIH,2013,97
+Botswana,BWA,1950,22.5
+Botswana,BWA,1991,69
+Botswana,BWA,2003,81
+Brazil,BRA,1900,34.7
+Brazil,BRA,1920,35.1
+Brazil,BRA,1940,43.9
+Brazil,BRA,1950,47.5
+Brazil,BRA,1980,75
+Brazil,BRA,2000,86
+Brazil,BRA,2004,89
+Brazil,BRA,2006,90
+Brazil,BRA,2007,90
+Brazil,BRA,2008,90
+Brazil,BRA,2009,90
+Brazil,BRA,2010,90
+Brazil,BRA,2011,91
+Brazil,BRA,2012,91
+Brazil,BRA,2013,91
+Brazil,BRA,2014,92
+Brazil,BRA,2015,92
+Brazil,BRA,2016,93
+Brazil,BRA,2017,93
+Brazil,BRA,2018,93
+Brunei,BRN,1950,27.5
+Brunei,BRN,1981,78
+Brunei,BRN,1991,88
+Brunei,BRN,2001,93
+Brunei,BRN,2011,96
+Bulgaria,BGR,1900,29.6
+Bulgaria,BGR,1905,34.5
+Bulgaria,BGR,1910,42.2
+Bulgaria,BGR,1920,53.3
+Bulgaria,BGR,1926,60.3
+Bulgaria,BGR,1934,68.6
+Bulgaria,BGR,1950,77.5
+Bulgaria,BGR,2001,98
+Bulgaria,BGR,2011,98
+Burkina Faso,BFA,1975,9
+Burkina Faso,BFA,1991,14
+Burkina Faso,BFA,1996,13
+Burkina Faso,BFA,2003,22
+Burkina Faso,BFA,2005,24
+Burkina Faso,BFA,2006,22
+Burkina Faso,BFA,2007,28
+Burkina Faso,BFA,2014,35
+Burkina Faso,BFA,2018,39
+Burkina Faso,BFA,2019,30
+Burkina Faso,BFA,2021,36.96738
+Burkina Faso,BFA,2022,40.92361
+Burundi,BDI,1979,23
+Burundi,BDI,1990,37
+Burundi,BDI,2000,59
+Burundi,BDI,2008,48
+Burundi,BDI,2014,62
+Burundi,BDI,2016,65.68774
+Burundi,BDI,2017,68
+Cambodia,KHM,1950,17.5
+Cambodia,KHM,1998,67
+Cambodia,KHM,2004,74
+Cambodia,KHM,2008,77
+Cambodia,KHM,2009,76
+Cambodia,KHM,2014,78
+Cambodia,KHM,2015,81
+Cambodia,KHM,2021,71.92725
+Cameroon,CMR,1950,7.5
+Cameroon,CMR,1976,41
+Cameroon,CMR,2000,68
+Cameroon,CMR,2007,71
+Cameroon,CMR,2010,71
+Cameroon,CMR,2018,72.54713
+Canada,CAN,1901,82.9
+Canada,CAN,1911,89
+Canada,CAN,1921,94.3
+Canada,CAN,1931,95.7
+Canada,CAN,1950,97.5
+Cape Verde,CPV,1950,22.5
+Cape Verde,CPV,1990,63
+Cape Verde,CPV,2012,85
+Cape Verde,CPV,2015,87
+Cayman Islands,CYM,2007,99
+Central African Republic,CAF,1950,3
+Central African Republic,CAF,1975,18
+Central African Republic,CAF,1988,34
+Central African Republic,CAF,2000,51
+Central African Republic,CAF,2019,42.44279
+Central and Southern Asia (SDG),,1975,38.60951
+Central and Southern Asia (SDG),,1976,38.67103
+Central and Southern Asia (SDG),,1977,39.32173
+Central and Southern Asia (SDG),,1978,39.97063
+Central and Southern Asia (SDG),,1979,40.614
+Central and Southern Asia (SDG),,1980,41.22859
+Central and Southern Asia (SDG),,1981,41.8161
+Central and Southern Asia (SDG),,1982,42.48007
+Central and Southern Asia (SDG),,1983,43.19952
+Central and Southern Asia (SDG),,1984,43.8527
+Central and Southern Asia (SDG),,1985,44.50827
+Central and Southern Asia (SDG),,1986,45.16565
+Central and Southern Asia (SDG),,1987,45.82521
+Central and Southern Asia (SDG),,1988,46.56606
+Central and Southern Asia (SDG),,1989,47.32452
+Central and Southern Asia (SDG),,1990,48.32116
+Central and Southern Asia (SDG),,1991,49.05992
+Central and Southern Asia (SDG),,1992,50.02463
+Central and Southern Asia (SDG),,1993,50.96456
+Central and Southern Asia (SDG),,1994,51.65748
+Central and Southern Asia (SDG),,1995,52.48868
+Central and Southern Asia (SDG),,1996,53.27746
+Central and Southern Asia (SDG),,1997,54.06332
+Central and Southern Asia (SDG),,1998,58.53805
+Central and Southern Asia (SDG),,1999,59.31843
+Central and Southern Asia (SDG),,2000,60.08303
+Central and Southern Asia (SDG),,2001,60.84338
+Central and Southern Asia (SDG),,2002,61.62705
+Central and Southern Asia (SDG),,2003,62.51307
+Central and Southern Asia (SDG),,2004,63.28101
+Central and Southern Asia (SDG),,2005,63.14516
+Central and Southern Asia (SDG),,2006,63.28799
+Central and Southern Asia (SDG),,2007,64.09655
+Central and Southern Asia (SDG),,2008,65.15713
+Central and Southern Asia (SDG),,2009,65.98215
+Central and Southern Asia (SDG),,2010,68.35281
+Central and Southern Asia (SDG),,2011,68.73041
+Central and Southern Asia (SDG),,2012,68.78113
+Central and Southern Asia (SDG),,2013,69.72007
+Central and Southern Asia (SDG),,2014,70.40182
+Central and Southern Asia (SDG),,2015,71.63145
+Central and Southern Asia (SDG),,2016,72.85133
+Central and Southern Asia (SDG),,2017,73.37587
+Central and Southern Asia (SDG),,2018,73.86521
+Central and Southern Asia (SDG),,2019,73.66493
+Central and Southern Asia (SDG),,2020,74.33241
+Central and Southern Asia (SDG),,2021,75.07198
+Central and Southern Asia (SDG),,2022,75.81275
+Central and Southern Asia (SDG),,2023,76.51431
+Chad,TCD,1993,11
+Chad,TCD,2000,26
+Chad,TCD,2004,28
+Chad,TCD,2016,22
+Chad,TCD,2019,30.62792
+Channel Islands,OWID_CIS,1950,98.5
+Chile,CHL,1907,50.1
+Chile,CHL,1920,63.1
+Chile,CHL,1930,75.6
+Chile,CHL,1940,73.6
+Chile,CHL,1950,77.5
+Chile,CHL,1982,91
+Chile,CHL,1992,94
+Chile,CHL,2002,96
+Chile,CHL,2011,97
+Chile,CHL,2013,96
+Chile,CHL,2015,97
+Chile,CHL,2017,96
+China,CHN,1950,47.5
+China,CHN,1982,66
+China,CHN,1990,78
+China,CHN,2000,91
+China,CHN,2010,95
+China,CHN,2020,97
+Cocos Islands,CCK,1950,17.5
+Colombia,COL,1918,42.4
+Colombia,COL,1928,51.6
+Colombia,COL,1938,55.8
+Colombia,COL,1950,52.5
+Colombia,COL,1993,91
+Colombia,COL,1996,91
+Colombia,COL,2004,93
+Colombia,COL,2005,93
+Colombia,COL,2006,92
+Colombia,COL,2007,93
+Colombia,COL,2008,93
+Colombia,COL,2009,93
+Colombia,COL,2010,93
+Colombia,COL,2011,94
+Colombia,COL,2014,94
+Colombia,COL,2015,94
+Colombia,COL,2016,95
+Colombia,COL,2018,95
+Colombia,COL,2019,95
+Colombia,COL,2020,96
+Comoros,COM,1950,22.5
+Comoros,COM,1980,48
+Comoros,COM,2000,68
+Congo,COG,1984,60
+Congo,COG,2005,76
+Cook Islands,COK,1950,92.5
+Costa Rica,CRI,1950,77.5
+Costa Rica,CRI,1984,93
+Costa Rica,CRI,2000,95
+Costa Rica,CRI,2011,97
+Cote d'Ivoire,CIV,1988,34
+Cote d'Ivoire,CIV,1998,36
+Cote d'Ivoire,CIV,2000,49
+Cote d'Ivoire,CIV,2014,44
+Cote d'Ivoire,CIV,2016,50.03968
+Cote d'Ivoire,CIV,2021,50.00064
+Croatia,HRV,1991,97
+Croatia,HRV,2001,98
+Cuba,CUB,1899,43.1
+Cuba,CUB,1907,56.4
+Cuba,CUB,1919,61.3
+Cuba,CUB,1931,71.8
+Cuba,CUB,1943,76.4
+Cuba,CUB,1950,77.5
+Cuba,CUB,1981,98
+Cuba,CUB,2002,100
+Cuba,CUB,2012,100
+Cuba,CUB,2019,97.65491
+Cyprus,CYP,1950,62.5
+Cyprus,CYP,1992,94
+Cyprus,CYP,2001,97
+Cyprus,CYP,2011,99
+Czechoslovakia,OWID_CZS,1950,97.5
+Democratic Republic of Congo,COD,1950,37.5
+Democratic Republic of Congo,COD,2001,67
+Democratic Republic of Congo,COD,2012,75
+Democratic Republic of Congo,COD,2016,77
+Democratic Republic of Congo,COD,2018,73.55303
+Denmark,DNK,1950,98.5
+Djibouti,DJI,1950,3
+Dominican Republic,DOM,1950,42.5
+Dominican Republic,DOM,1981,73
+Dominican Republic,DOM,2002,87
+Dominican Republic,DOM,2007,88
+Dominican Republic,DOM,2010,90
+Dominican Republic,DOM,2011,90
+Dominican Republic,DOM,2012,90
+Dominican Republic,DOM,2013,91
+Dominican Republic,DOM,2014,92
+Dominican Republic,DOM,2015,92
+Dominican Republic,DOM,2016,94
+East Asia and Pacific (WB),,1976,65.691
+East Asia and Pacific (WB),,1977,65.87666
+East Asia and Pacific (WB),,1978,66.96806
+East Asia and Pacific (WB),,1979,68.20414
+East Asia and Pacific (WB),,1980,69.30146
+East Asia and Pacific (WB),,1981,70.34557
+East Asia and Pacific (WB),,1982,71.3144
+East Asia and Pacific (WB),,1983,72.2447
+East Asia and Pacific (WB),,1984,73.23163
+East Asia and Pacific (WB),,1985,74.16798
+East Asia and Pacific (WB),,1986,75.00072
+East Asia and Pacific (WB),,1987,76.17425
+East Asia and Pacific (WB),,1988,79.95977
+East Asia and Pacific (WB),,1989,80.58923
+East Asia and Pacific (WB),,1990,81.17076
+East Asia and Pacific (WB),,1991,81.71117
+East Asia and Pacific (WB),,1992,82.22357
+East Asia and Pacific (WB),,1993,82.68984
+East Asia and Pacific (WB),,1994,83.24469
+East Asia and Pacific (WB),,1995,83.8043
+East Asia and Pacific (WB),,1996,84.29005
+East Asia and Pacific (WB),,1997,89.27749
+East Asia and Pacific (WB),,1998,89.64291
+East Asia and Pacific (WB),,1999,89.96028
+East Asia and Pacific (WB),,2000,90.32185
+East Asia and Pacific (WB),,2001,90.63564
+East Asia and Pacific (WB),,2002,90.98982
+East Asia and Pacific (WB),,2003,91.36144
+East Asia and Pacific (WB),,2004,91.69448
+East Asia and Pacific (WB),,2005,92.02961
+East Asia and Pacific (WB),,2006,92.37919
+East Asia and Pacific (WB),,2007,93.5125
+East Asia and Pacific (WB),,2008,93.81618
+East Asia and Pacific (WB),,2009,94.08518
+East Asia and Pacific (WB),,2010,94.20017
+East Asia and Pacific (WB),,2011,93.8646
+East Asia and Pacific (WB),,2012,94.09502
+East Asia and Pacific (WB),,2013,94.20693
+East Asia and Pacific (WB),,2014,94.71124
+East Asia and Pacific (WB),,2015,94.92792
+East Asia and Pacific (WB),,2016,95.13196
+East Asia and Pacific (WB),,2017,95.32305
+East Asia and Pacific (WB),,2018,95.36943
+East Asia and Pacific (WB),,2019,95.80688
+East Asia and Pacific (WB),,2020,96.0287
+East Asia and Pacific (WB),,2021,96.16493
+East Asia and Pacific (WB),,2022,96.30093
+East Asia and Pacific (WB),,2023,96.43049
+East Timor,TLS,1950,3
+East Timor,TLS,2001,38
+East Timor,TLS,2007,51
+East Timor,TLS,2010,58
+East Timor,TLS,2016,65.77913
+Eastern and South-Eastern Asia (SDG),,1976,65.50171
+Eastern and South-Eastern Asia (SDG),,1977,65.68772
+Eastern and South-Eastern Asia (SDG),,1978,66.79352
+Eastern and South-Eastern Asia (SDG),,1979,68.04645
+Eastern and South-Eastern Asia (SDG),,1980,69.1582
+Eastern and South-Eastern Asia (SDG),,1981,70.21553
+Eastern and South-Eastern Asia (SDG),,1982,71.19647
+Eastern and South-Eastern Asia (SDG),,1983,72.1383
+Eastern and South-Eastern Asia (SDG),,1984,73.13766
+Eastern and South-Eastern Asia (SDG),,1985,74.08572
+Eastern and South-Eastern Asia (SDG),,1986,74.92859
+Eastern and South-Eastern Asia (SDG),,1987,76.1177
+Eastern and South-Eastern Asia (SDG),,1988,79.95864
+Eastern and South-Eastern Asia (SDG),,1989,80.59546
+Eastern and South-Eastern Asia (SDG),,1990,81.18364
+Eastern and South-Eastern Asia (SDG),,1991,81.73081
+Eastern and South-Eastern Asia (SDG),,1992,82.24957
+Eastern and South-Eastern Asia (SDG),,1993,82.72173
+Eastern and South-Eastern Asia (SDG),,1994,83.28386
+Eastern and South-Eastern Asia (SDG),,1995,83.85079
+Eastern and South-Eastern Asia (SDG),,1996,84.34014
+Eastern and South-Eastern Asia (SDG),,1997,89.39987
+Eastern and South-Eastern Asia (SDG),,1998,89.76716
+Eastern and South-Eastern Asia (SDG),,1999,90.08641
+Eastern and South-Eastern Asia (SDG),,2000,90.45192
+Eastern and South-Eastern Asia (SDG),,2001,90.76801
+Eastern and South-Eastern Asia (SDG),,2002,91.12475
+Eastern and South-Eastern Asia (SDG),,2003,91.49954
+Eastern and South-Eastern Asia (SDG),,2004,91.83497
+Eastern and South-Eastern Asia (SDG),,2005,92.17309
+Eastern and South-Eastern Asia (SDG),,2006,92.52596
+Eastern and South-Eastern Asia (SDG),,2007,93.67552
+Eastern and South-Eastern Asia (SDG),,2008,93.98298
+Eastern and South-Eastern Asia (SDG),,2009,94.25554
+Eastern and South-Eastern Asia (SDG),,2010,94.37094
+Eastern and South-Eastern Asia (SDG),,2011,94.03088
+Eastern and South-Eastern Asia (SDG),,2012,94.26621
+Eastern and South-Eastern Asia (SDG),,2013,94.38122
+Eastern and South-Eastern Asia (SDG),,2014,94.89836
+Eastern and South-Eastern Asia (SDG),,2015,95.12345
+Eastern and South-Eastern Asia (SDG),,2016,95.33295
+Eastern and South-Eastern Asia (SDG),,2017,95.52963
+Eastern and South-Eastern Asia (SDG),,2018,95.57909
+Eastern and South-Eastern Asia (SDG),,2019,96.02655
+Eastern and South-Eastern Asia (SDG),,2020,96.25462
+Eastern and South-Eastern Asia (SDG),,2021,96.39394
+Eastern and South-Eastern Asia (SDG),,2022,96.53545
+Eastern and South-Eastern Asia (SDG),,2023,96.6705
+Ecuador,ECU,1950,57.5
+Ecuador,ECU,1982,84
+Ecuador,ECU,1990,88
+Ecuador,ECU,2001,91
+Ecuador,ECU,2007,92
+Ecuador,ECU,2008,92
+Ecuador,ECU,2009,92
+Ecuador,ECU,2010,92
+Ecuador,ECU,2011,92
+Ecuador,ECU,2012,92
+Ecuador,ECU,2013,93
+Ecuador,ECU,2014,94
+Ecuador,ECU,2015,94
+Ecuador,ECU,2016,94
+Ecuador,ECU,2017,93
+Ecuador,ECU,2020,94
+Ecuador,ECU,2021,94
+Ecuador,ECU,2022,94
+Egypt,EGY,1907,7.3
+Egypt,EGY,1917,8.8
+Egypt,EGY,1927,14.1
+Egypt,EGY,1937,14.8
+Egypt,EGY,1950,22.5
+Egypt,EGY,1976,38
+Egypt,EGY,1986,44
+Egypt,EGY,1996,56
+Egypt,EGY,2005,67
+Egypt,EGY,2006,66
+Egypt,EGY,2010,72
+Egypt,EGY,2012,74
+Egypt,EGY,2013,72
+Egypt,EGY,2017,71
+El Salvador,SLV,1950,37.5
+El Salvador,SLV,1992,74
+El Salvador,SLV,2006,84
+El Salvador,SLV,2007,82
+El Salvador,SLV,2008,84
+El Salvador,SLV,2009,84
+El Salvador,SLV,2010,84
+El Salvador,SLV,2011,85
+El Salvador,SLV,2013,87
+El Salvador,SLV,2015,88
+El Salvador,SLV,2016,88
+El Salvador,SLV,2017,88
+El Salvador,SLV,2018,89
+El Salvador,SLV,2019,89
+El Salvador,SLV,2020,90
+El Salvador,SLV,2023,90
+Equatorial Guinea,GNQ,1950,22.5
+Equatorial Guinea,GNQ,2000,88
+Eritrea,ERI,1950,3
+Eritrea,ERI,2002,53
+Eritrea,ERI,2008,65
+Estonia,EST,1989,100
+Estonia,EST,2000,100
+Estonia,EST,2011,100
+Eswatini,SWZ,1950,17.5
+Eswatini,SWZ,1976,55
+Eswatini,SWZ,1986,67
+Eswatini,SWZ,2000,82
+Eswatini,SWZ,2022,90.74702
+Ethiopia,ETH,1950,3
+Ethiopia,ETH,1994,27
+Ethiopia,ETH,2004,36
+Ethiopia,ETH,2007,39
+Ethiopia,ETH,2016,47.49159
+Europe and Central Asia (WB),,1994,95.93806
+Europe and Central Asia (WB),,1995,96.06758
+Europe and Central Asia (WB),,1996,96.22135
+Europe and Central Asia (WB),,1997,96.3414
+Europe and Central Asia (WB),,1998,96.48624
+Europe and Central Asia (WB),,1999,96.59245
+Europe and Central Asia (WB),,2000,96.65252
+Europe and Central Asia (WB),,2001,96.7528
+Europe and Central Asia (WB),,2002,96.91116
+Europe and Central Asia (WB),,2003,97.00517
+Europe and Central Asia (WB),,2004,97.09123
+Europe and Central Asia (WB),,2005,97.21017
+Europe and Central Asia (WB),,2006,97.27016
+Europe and Central Asia (WB),,2007,97.35178
+Europe and Central Asia (WB),,2008,97.47324
+Europe and Central Asia (WB),,2009,97.73077
+Europe and Central Asia (WB),,2010,97.89465
+Europe and Central Asia (WB),,2011,98.03516
+Europe and Central Asia (WB),,2012,98.13266
+Europe and Central Asia (WB),,2013,98.19623
+Europe and Central Asia (WB),,2014,98.23871
+Europe and Central Asia (WB),,2015,98.28185
+Europe and Central Asia (WB),,2016,98.33891
+Europe and Central Asia (WB),,2017,98.41798
+Europe and Central Asia (WB),,2018,98.50179
+Europe and Central Asia (WB),,2019,98.56401
+Europe and Central Asia (WB),,2020,98.60383
+Europe and Central Asia (WB),,2021,98.64628
+Europe and Central Asia (WB),,2022,98.66442
+Europe and Central Asia (WB),,2023,98.68871
+Europe and Northern America (SDG),,2003,97.8978
+Europe and Northern America (SDG),,2004,97.95613
+Europe and Northern America (SDG),,2005,98.00925
+Europe and Northern America (SDG),,2006,98.077
+Europe and Northern America (SDG),,2018,98.61607
+Europe and Northern America (SDG),,2019,98.64308
+Europe and Northern America (SDG),,2020,98.66912
+Europe and Northern America (SDG),,2021,98.69566
+Europe and Northern America (SDG),,2022,98.70273
+Falkland Islands,FLK,1950,92.5
+Faroe Islands,FRO,1950,98.5
+Fiji,FJI,1950,67.5
+Finland,FIN,1900,38.8
+Finland,FIN,1910,55.3
+Finland,FIN,1920,69.9
+Finland,FIN,1930,84.1
+Finland,FIN,1950,98.5
+France,FRA,1475,6
+France,FRA,1550,19
+France,FRA,1650,29
+France,FRA,1750,29
+France,FRA,1901,83.5
+France,FRA,1906,85.9
+France,FRA,1911,88.1
+France,FRA,1921,91.8
+France,FRA,1926,93.9
+France,FRA,1931,94.7
+France,FRA,1936,96
+France,FRA,1946,96.6
+France,FRA,1950,96.5
+French Guiana,GUF,1950,67.5
+French Guiana,GUF,1982,83
+French Polynesia,PYF,1950,32.5
+Gabon,GAB,1993,72
+Gabon,GAB,2021,88.85834
+Gambia,GMB,1950,7.5
+Gambia,GMB,2000,37
+Gambia,GMB,2015,51
+Gambia,GMB,2018,53.1602
+Gambia,GMB,2021,51.6374
+Georgia,GEO,2002,100
+Georgia,GEO,2014,100
+Georgia,GEO,2017,99
+Georgia,GEO,2018,99.65366
+Georgia,GEO,2022,100
+Georgia,GEO,2023,99.55547
+Germany,DEU,1475,9
+Germany,DEU,1550,16
+Germany,DEU,1650,31
+Germany,DEU,1750,38
+Germany,DEU,1950,98.5
+Ghana,GHA,1950,22.5
+Ghana,GHA,2000,58
+Ghana,GHA,2010,71
+Ghana,GHA,2017,64.49239
+Ghana,GHA,2021,76.48568
+Gibraltar,GIB,1950,67.5
+Greece,GRC,1907,39.5
+Greece,GRC,1920,48
+Greece,GRC,1928,58.1
+Greece,GRC,1950,72.5
+Greece,GRC,1981,91
+Greece,GRC,1991,93
+Greece,GRC,2001,96
+Greece,GRC,2009,94
+Greenland,GRL,1950,98.5
+Grenada,GRD,1950,67.5
+Grenada,GRD,1970,98
+Guadeloupe,GLP,1950,67.5
+Guadeloupe,GLP,1982,90
+Guam,GUM,1950,87.5
+Guam,GUM,1980,96
+Guam,GUM,1990,99
+Guatemala,GTM,1950,27.5
+Guatemala,GTM,1994,64
+Guatemala,GTM,2002,69
+Guatemala,GTM,2012,78
+Guatemala,GTM,2013,77
+Guatemala,GTM,2014,81
+Guatemala,GTM,2015,80.19509
+Guatemala,GTM,2018,81
+Guatemala,GTM,2022,83.03117
+Guinea,GIN,1996,21
+Guinea,GIN,2003,30
+Guinea,GIN,2010,25
+Guinea,GIN,2014,32
+Guinea,GIN,2018,40
+Guinea-Bissau,GNB,1950,3
+Guinea-Bissau,GNB,1979,20
+Guinea-Bissau,GNB,2000,41
+Guinea-Bissau,GNB,2019,54.88232
+Guinea-Bissau,GNB,2022,63.93413
+Guyana,GUY,1950,77.5
+Guyana,GUY,2020,85.63835
+Haiti,HTI,1950,12.5
+Haiti,HTI,1982,35
+Haiti,HTI,2003,59
+Haiti,HTI,2017,68.00986
+Honduras,HND,1926,26.1
+Honduras,HND,1930,33.4
+Honduras,HND,1935,32.6
+Honduras,HND,1940,34.7
+Honduras,HND,1945,36.3
+Honduras,HND,1950,37.5
+Honduras,HND,2001,80
+Honduras,HND,2007,84
+Honduras,HND,2010,85
+Honduras,HND,2011,85
+Honduras,HND,2012,85
+Honduras,HND,2013,85
+Honduras,HND,2014,87
+Honduras,HND,2015,88
+Honduras,HND,2016,89
+Honduras,HND,2018,87
+Honduras,HND,2019,89
+Hong Kong,HKG,1950,57.5
+Hungary,HUN,1900,60.1
+Hungary,HUN,1910,67.7
+Hungary,HUN,1920,86.6
+Hungary,HUN,1930,90
+Hungary,HUN,1941,93.6
+Hungary,HUN,1950,95.5
+Hungary,HUN,1980,99
+Iceland,ISL,1950,98.5
+India,IND,1901,6.2
+India,IND,1911,7
+India,IND,1921,8.3
+India,IND,1931,9.1
+India,IND,1950,17.5
+India,IND,1981,41
+India,IND,1991,48
+India,IND,2001,61
+India,IND,2006,63
+India,IND,2011,69
+India,IND,2022,76
+India,IND,2023,82
+Indonesia,IDN,1950,17.5
+Indonesia,IDN,1980,67
+Indonesia,IDN,1990,82
+Indonesia,IDN,2004,90
+Indonesia,IDN,2006,92
+Indonesia,IDN,2008,92
+Indonesia,IDN,2009,93
+Indonesia,IDN,2011,93
+Indonesia,IDN,2014,95
+Indonesia,IDN,2015,95
+Indonesia,IDN,2016,95
+Indonesia,IDN,2018,96
+Indonesia,IDN,2020,96
+Iran,IRN,1950,12.5
+Iran,IRN,1976,37
+Iran,IRN,1986,52
+Iran,IRN,1991,66
+Iran,IRN,1996,73
+Iran,IRN,2002,77
+Iran,IRN,2005,82
+Iran,IRN,2006,82
+Iran,IRN,2008,83
+Iran,IRN,2012,84
+Iran,IRN,2013,85
+Iran,IRN,2014,85
+Iran,IRN,2016,86
+Iraq,IRQ,1950,12.5
+Iraq,IRQ,2000,74
+Iraq,IRQ,2012,77
+Iraq,IRQ,2014,82
+Iraq,IRQ,2016,83
+Iraq,IRQ,2017,86
+Ireland,IRL,1475,0
+Ireland,IRL,1550,0
+Ireland,IRL,1650,3
+Ireland,IRL,1750,21
+Ireland,IRL,1950,98.5
+Isle of Man,IMN,1950,98.5
+Israel,ISR,1950,92.5
+Israel,ISR,1983,92
+Italy,ITA,1475,15
+Italy,ITA,1550,18
+Italy,ITA,1650,23
+Italy,ITA,1750,23
+Italy,ITA,1901,51.8
+Italy,ITA,1911,62.8
+Italy,ITA,1921,73.2
+Italy,ITA,1931,78.4
+Italy,ITA,1950,87.5
+Italy,ITA,1981,96
+Italy,ITA,2001,98
+Italy,ITA,2011,99
+Italy,ITA,2019,99
+Jamaica,JAM,1950,72.5
+Jamaica,JAM,1999,80
+Japan,JPN,1950,97.5
+Jordan,JOR,1950,17.5
+Jordan,JOR,1979,67
+Jordan,JOR,2003,90
+Jordan,JOR,2005,91
+Jordan,JOR,2007,92
+Jordan,JOR,2010,93
+Jordan,JOR,2011,96
+Jordan,JOR,2012,98
+Jordan,JOR,2018,95.43145
+Jordan,JOR,2023,95
+Kazakhstan,KAZ,1989,98
+Kazakhstan,KAZ,1999,100
+Kazakhstan,KAZ,2009,100
+Kenya,KEN,1950,22.5
+Kenya,KEN,2000,82
+Kiribati,KIR,1950,92.5
+Kiribati,KIR,2018,97.95971
+Kuwait,KWT,1950,17.5
+Kuwait,KWT,1975,60
+Kuwait,KWT,1980,68
+Kuwait,KWT,1985,74
+Kuwait,KWT,1995,78
+Kuwait,KWT,2005,93
+Kuwait,KWT,2006,93
+Kuwait,KWT,2007,94
+Kuwait,KWT,2008,94
+Kuwait,KWT,2010,94
+Kuwait,KWT,2012,96
+Kuwait,KWT,2013,96
+Kuwait,KWT,2015,96
+Kuwait,KWT,2017,96
+Kuwait,KWT,2018,96
+Kuwait,KWT,2020,96
+Kyrgyzstan,KGZ,1999,99
+Kyrgyzstan,KGZ,2009,99
+Laos,LAO,1950,17.5
+Laos,LAO,1995,60
+Laos,LAO,2000,70
+Laos,LAO,2001,69
+Laos,LAO,2005,73
+Laos,LAO,2015,85
+Latin America and Caribbean (WB),,1974,78.71795
+Latin America and Caribbean (WB),,1975,78.73743
+Latin America and Caribbean (WB),,1976,79.0867
+Latin America and Caribbean (WB),,1977,79.48948
+Latin America and Caribbean (WB),,1978,79.92699
+Latin America and Caribbean (WB),,1979,80.32272
+Latin America and Caribbean (WB),,1980,80.67739
+Latin America and Caribbean (WB),,1981,81.07406
+Latin America and Caribbean (WB),,1982,81.46111
+Latin America and Caribbean (WB),,1983,81.84256
+Latin America and Caribbean (WB),,1984,82.21321
+Latin America and Caribbean (WB),,1985,82.57384
+Latin America and Caribbean (WB),,1986,82.92527
+Latin America and Caribbean (WB),,1987,83.21761
+Latin America and Caribbean (WB),,1988,83.70771
+Latin America and Caribbean (WB),,1989,84.1495
+Latin America and Caribbean (WB),,1990,84.46787
+Latin America and Caribbean (WB),,1991,85.06639
+Latin America and Caribbean (WB),,1992,85.66554
+Latin America and Caribbean (WB),,1993,86.25491
+Latin America and Caribbean (WB),,1994,86.83326
+Latin America and Caribbean (WB),,1995,87.40622
+Latin America and Caribbean (WB),,1996,87.77912
+Latin America and Caribbean (WB),,1997,88.04446
+Latin America and Caribbean (WB),,1998,88.39903
+Latin America and Caribbean (WB),,1999,88.71655
+Latin America and Caribbean (WB),,2000,89.01666
+Latin America and Caribbean (WB),,2001,89.17575
+Latin America and Caribbean (WB),,2002,89.44306
+Latin America and Caribbean (WB),,2003,90.0959
+Latin America and Caribbean (WB),,2004,90.37227
+Latin America and Caribbean (WB),,2005,90.33941
+Latin America and Caribbean (WB),,2006,90.54231
+Latin America and Caribbean (WB),,2007,91.39063
+Latin America and Caribbean (WB),,2008,91.68934
+Latin America and Caribbean (WB),,2009,91.86467
+Latin America and Caribbean (WB),,2010,91.78517
+Latin America and Caribbean (WB),,2011,92.49057
+Latin America and Caribbean (WB),,2012,92.79948
+Latin America and Caribbean (WB),,2013,92.78406
+Latin America and Caribbean (WB),,2014,93.28205
+Latin America and Caribbean (WB),,2015,93.42686
+Latin America and Caribbean (WB),,2016,93.86832
+Latin America and Caribbean (WB),,2017,93.89947
+Latin America and Caribbean (WB),,2018,94.08591
+Latin America and Caribbean (WB),,2019,94.25567
+Latin America and Caribbean (WB),,2020,94.31331
+Latin America and Caribbean (WB),,2021,94.49382
+Latin America and Caribbean (WB),,2022,94.64692
+Latin America and Caribbean (WB),,2023,94.79001
+Latin America and the Caribbean (SDG),,1974,78.71851
+Latin America and the Caribbean (SDG),,1975,78.73799
+Latin America and the Caribbean (SDG),,1976,79.08725
+Latin America and the Caribbean (SDG),,1977,79.49001
+Latin America and the Caribbean (SDG),,1978,79.9275
+Latin America and the Caribbean (SDG),,1979,80.32321
+Latin America and the Caribbean (SDG),,1980,80.67787
+Latin America and the Caribbean (SDG),,1981,81.07452
+Latin America and the Caribbean (SDG),,1982,81.46156
+Latin America and the Caribbean (SDG),,1983,81.84299
+Latin America and the Caribbean (SDG),,1984,82.21363
+Latin America and the Caribbean (SDG),,1985,82.57424
+Latin America and the Caribbean (SDG),,1986,82.92566
+Latin America and the Caribbean (SDG),,1987,83.21799
+Latin America and the Caribbean (SDG),,1988,83.70807
+Latin America and the Caribbean (SDG),,1989,84.14984
+Latin America and the Caribbean (SDG),,1990,84.4682
+Latin America and the Caribbean (SDG),,1991,85.0667
+Latin America and the Caribbean (SDG),,1992,85.66582
+Latin America and the Caribbean (SDG),,1993,86.25516
+Latin America and the Caribbean (SDG),,1994,86.83348
+Latin America and the Caribbean (SDG),,1995,87.40642
+Latin America and the Caribbean (SDG),,1996,87.77931
+Latin America and the Caribbean (SDG),,1997,88.04464
+Latin America and the Caribbean (SDG),,1998,88.3992
+Latin America and the Caribbean (SDG),,1999,88.71671
+Latin America and the Caribbean (SDG),,2000,89.01682
+Latin America and the Caribbean (SDG),,2001,89.17591
+Latin America and the Caribbean (SDG),,2002,89.44321
+Latin America and the Caribbean (SDG),,2003,90.09602
+Latin America and the Caribbean (SDG),,2004,90.37239
+Latin America and the Caribbean (SDG),,2005,90.33953
+Latin America and the Caribbean (SDG),,2006,90.54242
+Latin America and the Caribbean (SDG),,2007,91.39071
+Latin America and the Caribbean (SDG),,2008,91.68941
+Latin America and the Caribbean (SDG),,2009,91.86474
+Latin America and the Caribbean (SDG),,2010,91.78525
+Latin America and the Caribbean (SDG),,2011,92.49063
+Latin America and the Caribbean (SDG),,2012,92.79953
+Latin America and the Caribbean (SDG),,2013,92.78411
+Latin America and the Caribbean (SDG),,2014,93.28208
+Latin America and the Caribbean (SDG),,2015,93.42689
+Latin America and the Caribbean (SDG),,2016,93.86834
+Latin America and the Caribbean (SDG),,2017,93.89949
+Latin America and the Caribbean (SDG),,2018,94.08592
+Latin America and the Caribbean (SDG),,2019,94.25568
+Latin America and the Caribbean (SDG),,2020,94.31331
+Latin America and the Caribbean (SDG),,2021,94.49382
+Latin America and the Caribbean (SDG),,2022,94.64692
+Latin America and the Caribbean (SDG),,2023,94.79
+Latvia,LVA,1989,99
+Latvia,LVA,2000,100
+Latvia,LVA,2011,100
+Lebanon,LBN,1950,47.5
+Lebanon,LBN,2007,90
+Lebanon,LBN,2009,91
+Lebanon,LBN,2018,93
+Lesotho,LSO,1950,52.5
+Lesotho,LSO,2000,86
+Lesotho,LSO,2006,66
+Lesotho,LSO,2016,97
+Lesotho,LSO,2018,86.24087
+Liberia,LBR,1950,7.5
+Liberia,LBR,1984,32
+Libya,LBY,1950,7.5
+Libya,LBY,1984,60
+Liechtenstein,LIE,1950,98.5
+Lithuania,LTU,1989,98
+Lithuania,LTU,2001,100
+Lithuania,LTU,2011,100
+Low-income countries,,1988,46.47354
+Low-income countries,,1989,46.89375
+Low-income countries,,1990,47.39165
+Low-income countries,,1991,47.6823
+Low-income countries,,1992,47.82185
+Low-income countries,,1993,48.03085
+Low-income countries,,1994,48.31109
+Low-income countries,,1995,48.676
+Low-income countries,,1996,49.04267
+Low-income countries,,1997,49.73331
+Low-income countries,,1998,50.43019
+Low-income countries,,1999,50.97881
+Low-income countries,,2000,51.39866
+Low-income countries,,2001,52.04716
+Low-income countries,,2002,52.7164
+Low-income countries,,2003,53.11349
+Low-income countries,,2004,53.58198
+Low-income countries,,2005,53.99721
+Low-income countries,,2006,52.1799
+Low-income countries,,2007,53.41816
+Low-income countries,,2008,54.31401
+Low-income countries,,2009,54.82347
+Low-income countries,,2010,55.31973
+Low-income countries,,2011,57.35872
+Low-income countries,,2012,57.80881
+Low-income countries,,2013,58.65501
+Low-income countries,,2014,59.07083
+Low-income countries,,2015,59.74246
+Low-income countries,,2016,60.4267
+Low-income countries,,2017,61.48362
+Low-income countries,,2018,61.45404
+Low-income countries,,2019,61.52847
+Low-income countries,,2020,61.69004
+Low-income countries,,2021,62.18141
+Low-income countries,,2022,62.63246
+Low-income countries,,2023,63.03853
+Lower-middle-income countries,,1975,44.26188
+Lower-middle-income countries,,1976,44.36313
+Lower-middle-income countries,,1977,44.89862
+Lower-middle-income countries,,1978,45.45136
+Lower-middle-income countries,,1979,46.00061
+Lower-middle-income countries,,1980,46.53306
+Lower-middle-income countries,,1981,47.06519
+Lower-middle-income countries,,1982,47.63435
+Lower-middle-income countries,,1983,48.12107
+Lower-middle-income countries,,1984,48.72107
+Lower-middle-income countries,,1985,49.32205
+Lower-middle-income countries,,1986,49.83683
+Lower-middle-income countries,,1987,50.71524
+Lower-middle-income countries,,1988,51.40592
+Lower-middle-income countries,,1989,52.1036
+Lower-middle-income countries,,1990,52.8069
+Lower-middle-income countries,,1991,53.51564
+Lower-middle-income countries,,1992,54.40485
+Lower-middle-income countries,,1993,55.26998
+Lower-middle-income countries,,1994,56.08274
+Lower-middle-income countries,,1995,56.85776
+Lower-middle-income countries,,1996,57.63437
+Lower-middle-income countries,,1997,58.41293
+Lower-middle-income countries,,1998,61.84885
+Lower-middle-income countries,,1999,62.59148
+Lower-middle-income countries,,2000,62.80231
+Lower-middle-income countries,,2001,63.52992
+Lower-middle-income countries,,2002,64.24833
+Lower-middle-income countries,,2003,65.29472
+Lower-middle-income countries,,2004,65.99687
+Lower-middle-income countries,,2005,65.78602
+Lower-middle-income countries,,2006,65.76852
+Lower-middle-income countries,,2007,66.29194
+Lower-middle-income countries,,2008,66.94372
+Lower-middle-income countries,,2009,67.63524
+Lower-middle-income countries,,2010,69.50833
+Lower-middle-income countries,,2011,69.80986
+Lower-middle-income countries,,2012,70.25576
+Lower-middle-income countries,,2013,71.1596
+Lower-middle-income countries,,2014,71.89687
+Lower-middle-income countries,,2015,72.98467
+Lower-middle-income countries,,2016,73.734
+Lower-middle-income countries,,2017,74.26711
+Lower-middle-income countries,,2018,75.07314
+Lower-middle-income countries,,2019,75.24551
+Lower-middle-income countries,,2020,75.8803
+Lower-middle-income countries,,2021,76.48823
+Lower-middle-income countries,,2022,77.08264
+Lower-middle-income countries,,2023,77.63182
+Luxembourg,LUX,1950,96.5
+Macao,MAC,1950,57.5
+Macao,MAC,1981,90
+Macao,MAC,2001,91
+Macao,MAC,2006,93
+Macao,MAC,2011,96
+Macao,MAC,2016,97
+Madagascar,MDG,1950,32.5
+Madagascar,MDG,2000,71
+Madagascar,MDG,2005,59
+Madagascar,MDG,2012,72
+Madagascar,MDG,2018,77
+Madagascar,MDG,2021,74.68614
+Malawi,MWI,1950,7.5
+Malawi,MWI,1987,49
+Malawi,MWI,1998,64
+Malawi,MWI,2020,70.15227
+Malaysia,MYS,1950,37.5
+Malaysia,MYS,1980,70
+Malaysia,MYS,1991,83
+Malaysia,MYS,2000,89
+Malaysia,MYS,2010,93
+Malaysia,MYS,2016,95
+Malaysia,MYS,2017,95
+Malaysia,MYS,2018,95
+Malaysia,MYS,2019,95
+Malaysia,MYS,2022,96
+Maldives,MDV,1950,72.5
+Maldives,MDV,1977,82
+Maldives,MDV,1985,92
+Maldives,MDV,1990,96
+Maldives,MDV,1995,96
+Maldives,MDV,2000,96
+Maldives,MDV,2006,98
+Maldives,MDV,2014,99
+Maldives,MDV,2016,98
+Maldives,MDV,2017,94.50551
+Maldives,MDV,2019,98.21186
+Mali,MLI,1976,9
+Mali,MLI,1998,19
+Mali,MLI,2003,24
+Mali,MLI,2006,26
+Mali,MLI,2010,31
+Mali,MLI,2011,31
+Mali,MLI,2015,33
+Mali,MLI,2018,35
+Malta,MLT,1950,57.5
+Malta,MLT,1985,87
+Malta,MLT,1995,88
+Malta,MLT,2005,92
+Malta,MLT,2011,93
+Marshall Islands,MHL,2011,98
+Martinique,MTQ,1950,72.5
+Martinique,MTQ,1982,93
+Mauritania,MRT,2000,51
+Mauritania,MRT,2013,62
+Mauritania,MRT,2015,65.11202
+Mauritania,MRT,2020,59.52966
+Mauritius,MUS,1950,52.5
+Mauritius,MUS,1990,80
+Mauritius,MUS,2000,84
+Mauritius,MUS,2011,89
+Mauritius,MUS,2012,92
+Mauritius,MUS,2013,91
+Mauritius,MUS,2014,92
+Mauritius,MUS,2015,93
+Mauritius,MUS,2016,93
+Mexico,MEX,1900,22.3
+Mexico,MEX,1910,27.7
+Mexico,MEX,1921,33.8
+Mexico,MEX,1930,38.5
+Mexico,MEX,1940,46
+Mexico,MEX,1950,62.5
+Mexico,MEX,1980,83
+Mexico,MEX,1990,88
+Mexico,MEX,2000,91
+Mexico,MEX,2002,90
+Mexico,MEX,2004,91
+Mexico,MEX,2005,92
+Mexico,MEX,2006,92
+Mexico,MEX,2007,93
+Mexico,MEX,2008,93
+Mexico,MEX,2009,93
+Mexico,MEX,2010,93
+Mexico,MEX,2011,94
+Mexico,MEX,2012,94
+Mexico,MEX,2013,94
+Mexico,MEX,2014,95
+Mexico,MEX,2015,94
+Mexico,MEX,2016,95
+Mexico,MEX,2017,95
+Mexico,MEX,2018,95
+Mexico,MEX,2020,95
+Middle East and North Africa (WB),,1974,43.99972
+Middle East and North Africa (WB),,1975,44.49103
+Middle East and North Africa (WB),,1976,44.99968
+Middle East and North Africa (WB),,1977,45.55852
+Middle East and North Africa (WB),,1978,46.21684
+Middle East and North Africa (WB),,1979,46.89799
+Middle East and North Africa (WB),,1980,47.65434
+Middle East and North Africa (WB),,1981,48.41632
+Middle East and North Africa (WB),,1982,49.33712
+Middle East and North Africa (WB),,1983,50.03418
+Middle East and North Africa (WB),,1984,50.99546
+Middle East and North Africa (WB),,1985,51.94508
+Middle East and North Africa (WB),,1986,52.89566
+Middle East and North Africa (WB),,1987,53.82654
+Middle East and North Africa (WB),,1988,54.84007
+Middle East and North Africa (WB),,1989,55.84551
+Middle East and North Africa (WB),,1990,58.23571
+Middle East and North Africa (WB),,1991,59.42651
+Middle East and North Africa (WB),,1992,60.52205
+Middle East and North Africa (WB),,1993,61.38714
+Middle East and North Africa (WB),,1994,62.34871
+Middle East and North Africa (WB),,1995,63.82514
+Middle East and North Africa (WB),,1996,64.96068
+Middle East and North Africa (WB),,1997,66.06362
+Middle East and North Africa (WB),,1998,67.26733
+Middle East and North Africa (WB),,1999,68.36744
+Middle East and North Africa (WB),,2000,69.40159
+Middle East and North Africa (WB),,2001,70.53242
+Middle East and North Africa (WB),,2002,71.56456
+Middle East and North Africa (WB),,2003,74.12706
+Middle East and North Africa (WB),,2004,74.96323
+Middle East and North Africa (WB),,2005,75.57109
+Middle East and North Africa (WB),,2006,74.59212
+Middle East and North Africa (WB),,2007,75.36998
+Middle East and North Africa (WB),,2008,77.08521
+Middle East and North Africa (WB),,2009,76.01827
+Middle East and North Africa (WB),,2010,76.60938
+Middle East and North Africa (WB),,2011,77.32386
+Middle East and North Africa (WB),,2012,77.99774
+Middle East and North Africa (WB),,2013,78.60817
+Middle East and North Africa (WB),,2014,78.98551
+Middle East and North Africa (WB),,2015,79.63974
+Middle East and North Africa (WB),,2016,78.47635
+Middle East and North Africa (WB),,2017,78.92874
+Middle East and North Africa (WB),,2018,79.25672
+Middle East and North Africa (WB),,2019,79.55386
+Middle East and North Africa (WB),,2020,79.89577
+Middle East and North Africa (WB),,2021,80.30119
+Middle East and North Africa (WB),,2022,80.6111
+Middle East and North Africa (WB),,2023,80.94914
+Middle-income countries,,1975,58.92093
+Middle-income countries,,1976,59.08536
+Middle-income countries,,1977,59.42156
+Middle-income countries,,1978,60.21147
+Middle-income countries,,1979,61.05474
+Middle-income countries,,1980,61.83566
+Middle-income countries,,1981,62.59563
+Middle-income countries,,1982,63.33568
+Middle-income countries,,1983,64.0488
+Middle-income countries,,1984,64.88833
+Middle-income countries,,1985,65.635
+Middle-income countries,,1986,66.33725
+Middle-income countries,,1987,67.19151
+Middle-income countries,,1988,69.37021
+Middle-income countries,,1989,70.00896
+Middle-income countries,,1990,70.69976
+Middle-income countries,,1991,71.22915
+Middle-income countries,,1992,71.83592
+Middle-income countries,,1993,72.41556
+Middle-income countries,,1994,72.96025
+Middle-income countries,,1995,73.51708
+Middle-income countries,,1996,74.0451
+Middle-income countries,,1997,76.71142
+Middle-income countries,,1998,78.29854
+Middle-income countries,,1999,78.73321
+Middle-income countries,,2000,78.97723
+Middle-income countries,,2001,79.38092
+Middle-income countries,,2002,79.81483
+Middle-income countries,,2003,80.44843
+Middle-income countries,,2004,80.87951
+Middle-income countries,,2005,80.87994
+Middle-income countries,,2006,80.98057
+Middle-income countries,,2007,81.68252
+Middle-income countries,,2008,82.1301
+Middle-income countries,,2009,82.41629
+Middle-income countries,,2010,83.27524
+Middle-income countries,,2011,83.41603
+Middle-income countries,,2012,83.67213
+Middle-income countries,,2013,84.04509
+Middle-income countries,,2014,84.49078
+Middle-income countries,,2015,84.97399
+Middle-income countries,,2016,85.37055
+Middle-income countries,,2017,85.5536
+Middle-income countries,,2018,85.94582
+Middle-income countries,,2019,86.11558
+Middle-income countries,,2020,86.40705
+Middle-income countries,,2021,86.65189
+Middle-income countries,,2022,86.95844
+Middle-income countries,,2023,87.22839
+Moldova,MDA,1989,96
+Moldova,MDA,2000,97
+Moldova,MDA,2014,99
+Monaco,MCO,1950,96.5
+Mongolia,MNG,1950,57.5
+Mongolia,MNG,2000,98
+Mongolia,MNG,2010,98
+Mongolia,MNG,2018,96.89635
+Mongolia,MNG,2020,99
+Mongolia,MNG,2022,98.72622
+Montenegro,MNE,1981,90
+Montenegro,MNE,1991,93
+Montenegro,MNE,2003,98
+Montenegro,MNE,2011,98
+Montenegro,MNE,2018,98.5344
+Morocco,MAR,1950,12.5
+Morocco,MAR,1982,30
+Morocco,MAR,1994,42
+Morocco,MAR,2004,52
+Morocco,MAR,2008,55
+Morocco,MAR,2009,56
+Morocco,MAR,2011,67
+Morocco,MAR,2012,69
+Morocco,MAR,2014,76
+Mozambique,MOZ,1950,3
+Mozambique,MOZ,1980,27
+Mozambique,MOZ,1997,39
+Mozambique,MOZ,2003,48
+Mozambique,MOZ,2009,51
+Mozambique,MOZ,2015,56
+Mozambique,MOZ,2017,61
+Mozambique,MOZ,2020,60
+Myanmar,MMR,1901,28.4
+Myanmar,MMR,1911,29.4
+Myanmar,MMR,1921,35.7
+Myanmar,MMR,1931,40.2
+Myanmar,MMR,1950,57.5
+Myanmar,MMR,1983,79
+Myanmar,MMR,2000,90
+Myanmar,MMR,2014,90
+Myanmar,MMR,2019,89
+Namibia,NAM,1991,76
+Namibia,NAM,2001,85
+Namibia,NAM,2011,88
+Nauru,NRU,1950,72.5
+Nauru,NRU,2023,96.58654
+Nepal,NPL,1950,3
+Nepal,NPL,1981,21
+Nepal,NPL,1991,33
+Nepal,NPL,2001,49
+Nepal,NPL,2011,60
+Nepal,NPL,2016,65.50101
+Nepal,NPL,2019,68.7125
+Netherlands,NLD,1475,17
+Netherlands,NLD,1550,12
+Netherlands,NLD,1650,53
+Netherlands,NLD,1750,85
+Netherlands,NLD,1950,98.5
+Netherlands Antilles,ANT,1950,72.5
+New Caledonia,NCL,1950,37.5
+New Caledonia,NCL,1976,91
+New Caledonia,NCL,1989,93
+New Caledonia,NCL,1996,96
+New Zealand,NZL,1950,98.5
+Nicaragua,NIC,1950,37.5
+Nicaragua,NIC,2001,77
+Nicaragua,NIC,2005,78
+Niger,NER,2001,14
+Niger,NER,2005,29
+Niger,NER,2012,31
+Niger,NER,2018,33.04745
+Niger,NER,2022,35.60971
+Nigeria,NGA,1950,12.5
+Nigeria,NGA,1991,55
+Nigeria,NGA,2003,55
+Nigeria,NGA,2006,70
+Nigeria,NGA,2016,58.22134
+Nigeria,NGA,2021,63.15554
+Niue,NIU,1950,92.5
+Norfolk Island,NFK,1950,87.5
+North America (WB),,2003,98.61992
+North America (WB),,2004,98.63156
+North America (WB),,2005,98.64237
+North America (WB),,2006,98.65695
+North America (WB),,2007,98.66643
+North America (WB),,2008,98.68658
+North America (WB),,2017,98.75348
+North America (WB),,2018,98.75979
+North America (WB),,2019,98.76517
+North America (WB),,2020,98.77029
+North America (WB),,2021,98.77717
+North America (WB),,2022,98.77941
+North Korea,PRK,2008,100
+North Macedonia,MKD,1994,94
+North Macedonia,MKD,2002,96
+Northern Africa and Western Asia (SDG),,1976,54.3411
+Northern Africa and Western Asia (SDG),,1977,54.78078
+Northern Africa and Western Asia (SDG),,1978,55.29722
+Northern Africa and Western Asia (SDG),,1979,55.67316
+Northern Africa and Western Asia (SDG),,1980,56.26776
+Northern Africa and Western Asia (SDG),,1981,56.8871
+Northern Africa and Western Asia (SDG),,1982,57.57365
+Northern Africa and Western Asia (SDG),,1983,57.84152
+Northern Africa and Western Asia (SDG),,1984,59.73399
+Northern Africa and Western Asia (SDG),,1985,60.46863
+Northern Africa and Western Asia (SDG),,1986,61.20571
+Northern Africa and Western Asia (SDG),,1987,61.92454
+Northern Africa and Western Asia (SDG),,1988,62.71324
+Northern Africa and Western Asia (SDG),,1989,63.37794
+Northern Africa and Western Asia (SDG),,1990,64.19637
+Northern Africa and Western Asia (SDG),,1991,65.00349
+Northern Africa and Western Asia (SDG),,1992,65.77178
+Northern Africa and Western Asia (SDG),,1993,66.33577
+Northern Africa and Western Asia (SDG),,1994,67.05767
+Northern Africa and Western Asia (SDG),,1995,67.79916
+Northern Africa and Western Asia (SDG),,1996,68.66977
+Northern Africa and Western Asia (SDG),,1997,69.50703
+Northern Africa and Western Asia (SDG),,1998,70.41439
+Northern Africa and Western Asia (SDG),,1999,71.24101
+Northern Africa and Western Asia (SDG),,2000,72.16486
+Northern Africa and Western Asia (SDG),,2001,73.03478
+Northern Africa and Western Asia (SDG),,2002,73.83571
+Northern Africa and Western Asia (SDG),,2003,75.93867
+Northern Africa and Western Asia (SDG),,2004,76.60167
+Northern Africa and Western Asia (SDG),,2005,77.18137
+Northern Africa and Western Asia (SDG),,2006,75.35314
+Northern Africa and Western Asia (SDG),,2007,76.0082
+Northern Africa and Western Asia (SDG),,2008,76.72649
+Northern Africa and Western Asia (SDG),,2009,76.07653
+Northern Africa and Western Asia (SDG),,2010,76.8703
+Northern Africa and Western Asia (SDG),,2011,78.47644
+Northern Africa and Western Asia (SDG),,2012,79.18889
+Northern Africa and Western Asia (SDG),,2013,79.80632
+Northern Africa and Western Asia (SDG),,2014,80.18829
+Northern Africa and Western Asia (SDG),,2015,80.74607
+Northern Africa and Western Asia (SDG),,2016,79.70249
+Northern Africa and Western Asia (SDG),,2017,80.08974
+Northern Africa and Western Asia (SDG),,2018,80.34868
+Northern Africa and Western Asia (SDG),,2019,80.59253
+Northern Africa and Western Asia (SDG),,2020,80.83071
+Northern Africa and Western Asia (SDG),,2021,81.11396
+Northern Africa and Western Asia (SDG),,2022,81.32228
+Northern Africa and Western Asia (SDG),,2023,81.52536
+Norway,NOR,1950,98.5
+Oceania (excluding Australia and New Zealand) (SDG),,1994,63.83721
+Oceania (excluding Australia and New Zealand) (SDG),,1995,63.73516
+Oceania (excluding Australia and New Zealand) (SDG),,1996,64.12549
+Oceania (excluding Australia and New Zealand) (SDG),,1997,64.51518
+Oceania (excluding Australia and New Zealand) (SDG),,1998,64.89708
+Oceania (excluding Australia and New Zealand) (SDG),,1999,65.18096
+Oceania (excluding Australia and New Zealand) (SDG),,2000,65.35132
+Oceania (excluding Australia and New Zealand) (SDG),,2001,65.67382
+Oceania (excluding Australia and New Zealand) (SDG),,2002,65.98396
+Oceania (excluding Australia and New Zealand) (SDG),,2003,66.2849
+Oceania (excluding Australia and New Zealand) (SDG),,2004,66.58231
+Oceania (excluding Australia and New Zealand) (SDG),,2005,66.86126
+Oceania (excluding Australia and New Zealand) (SDG),,2006,67.13211
+Oceania (excluding Australia and New Zealand) (SDG),,2007,67.3978
+Oceania (excluding Australia and New Zealand) (SDG),,2008,67.65311
+Oceania (excluding Australia and New Zealand) (SDG),,2009,67.89148
+Oceania (excluding Australia and New Zealand) (SDG),,2010,68.12718
+Oceania (excluding Australia and New Zealand) (SDG),,2011,68.01376
+Oceania (excluding Australia and New Zealand) (SDG),,2012,67.90237
+Oceania (excluding Australia and New Zealand) (SDG),,2013,67.79107
+Oceania (excluding Australia and New Zealand) (SDG),,2017,67.29137
+Oceania (excluding Australia and New Zealand) (SDG),,2018,67.18698
+Oceania (excluding Australia and New Zealand) (SDG),,2019,67.08638
+Oceania (excluding Australia and New Zealand) (SDG),,2020,66.98972
+Oceania (excluding Australia and New Zealand) (SDG),,2021,66.96753
+Oman,OMN,1950,3
+Oman,OMN,2003,66
+Oman,OMN,2008,87
+Oman,OMN,2010,87
+Oman,OMN,2015,93
+Oman,OMN,2017,96
+Oman,OMN,2018,96
+Oman,OMN,2020,97
+Oman,OMN,2022,97
+Pakistan,PAK,1950,17.5
+Pakistan,PAK,1981,26
+Pakistan,PAK,1998,43
+Pakistan,PAK,2005,50
+Pakistan,PAK,2006,54
+Pakistan,PAK,2007,52
+Pakistan,PAK,2008,56
+Pakistan,PAK,2009,55
+Pakistan,PAK,2010,55
+Pakistan,PAK,2011,55
+Pakistan,PAK,2012,57
+Pakistan,PAK,2013,56
+Pakistan,PAK,2014,57
+Pakistan,PAK,2017,59
+Pakistan,PAK,2018,57
+Pakistan,PAK,2019,58
+Pakistan,PAK,2021,58.8561
+Palau,PLW,1980,92
+Palau,PLW,2013,100
+Palau,PLW,2015,97
+Palestine,PSE,1997,86
+Palestine,PSE,2004,92
+Palestine,PSE,2006,93
+Palestine,PSE,2007,94
+Palestine,PSE,2008,94
+Palestine,PSE,2009,94
+Palestine,PSE,2010,95
+Palestine,PSE,2011,95
+Palestine,PSE,2012,96
+Palestine,PSE,2013,96
+Palestine,PSE,2014,96
+Palestine,PSE,2015,96
+Palestine,PSE,2016,97
+Palestine,PSE,2017,97
+Palestine,PSE,2018,97
+Palestine,PSE,2019,97
+Palestine,PSE,2020,98
+Palestine,PSE,2022,98
+Panama,PAN,1950,67.5
+Panama,PAN,1980,88
+Panama,PAN,1990,89
+Panama,PAN,2000,92
+Panama,PAN,2010,94
+Panama,PAN,2018,95
+Panama,PAN,2019,96
+Papua New Guinea,PNG,1950,7.5
+Papua New Guinea,PNG,2000,57
+Papua New Guinea,PNG,2017,70.06368
+Paraguay,PRY,1950,67.5
+Paraguay,PRY,1982,78
+Paraguay,PRY,1992,90
+Paraguay,PRY,2007,95
+Paraguay,PRY,2008,93
+Paraguay,PRY,2009,94
+Paraguay,PRY,2010,94
+Paraguay,PRY,2012,94
+Paraguay,PRY,2013,95
+Paraguay,PRY,2014,95
+Paraguay,PRY,2015,96
+Paraguay,PRY,2016,95
+Paraguay,PRY,2018,94
+Paraguay,PRY,2019,93
+Paraguay,PRY,2020,95
+Peru,PER,1950,47.5
+Peru,PER,1981,82
+Peru,PER,1993,87
+Peru,PER,2004,88
+Peru,PER,2005,88
+Peru,PER,2006,89
+Peru,PER,2007,90
+Peru,PER,2012,94
+Peru,PER,2014,94
+Peru,PER,2015,94
+Peru,PER,2016,94
+Peru,PER,2017,94
+Peru,PER,2018,94
+Peru,PER,2020,94
+Philippines,PHL,1918,49.2
+Philippines,PHL,1939,48.8
+Philippines,PHL,1948,61.3
+Philippines,PHL,1950,62.5
+Philippines,PHL,1980,83
+Philippines,PHL,1990,94
+Philippines,PHL,1994,94
+Philippines,PHL,2000,93
+Philippines,PHL,2003,93
+Philippines,PHL,2008,95
+Philippines,PHL,2013,96
+Philippines,PHL,2015,98
+Philippines,PHL,2019,96
+Philippines,PHL,2020,98
+Poland,POL,1475,0
+Poland,POL,1550,0
+Poland,POL,1650,3
+Poland,POL,1750,5
+Poland,POL,1950,92.5
+Poland,POL,1978,99
+Portugal,PRT,1900,26.6
+Portugal,PRT,1911,31.1
+Portugal,PRT,1920,34.8
+Portugal,PRT,1930,39.8
+Portugal,PRT,1940,49.6
+Portugal,PRT,1950,57.5
+Portugal,PRT,1981,79
+Portugal,PRT,1991,88
+Portugal,PRT,2011,94
+Puerto Rico,PRI,1950,72.5
+Puerto Rico,PRI,1980,87
+Puerto Rico,PRI,1990,90
+Puerto Rico,PRI,2010,92
+Puerto Rico,PRI,2017,92
+Qatar,QAT,1950,7.5
+Qatar,QAT,1986,76
+Qatar,QAT,1997,83
+Qatar,QAT,2004,89
+Qatar,QAT,2007,93
+Qatar,QAT,2008,94
+Qatar,QAT,2009,95
+Qatar,QAT,2010,96
+Qatar,QAT,2011,96
+Qatar,QAT,2012,97
+Qatar,QAT,2013,97
+Qatar,QAT,2014,98
+Reunion,REU,1950,37.5
+Reunion,REU,1982,79
+Romania,ROU,1950,77.5
+Romania,ROU,1992,97
+Romania,ROU,2002,97
+Romania,ROU,2011,99
+Romania,ROU,2021,99
+Russia,RUS,1989,98
+Russia,RUS,2002,99
+Russia,RUS,2010,100
+Russia,RUS,2021,100
+Rwanda,RWA,1950,7.5
+Rwanda,RWA,1978,38
+Rwanda,RWA,1991,58
+Rwanda,RWA,2000,65
+Rwanda,RWA,2012,68
+Rwanda,RWA,2014,71
+Rwanda,RWA,2018,73
+Rwanda,RWA,2020,80.05086
+Rwanda,RWA,2022,79
+Saint Helena,SHN,1950,98.5
+Saint Helena,SHN,1998,97
+Saint Pierre and Miquelon,SPM,1950,92.5
+Saint Pierre and Miquelon,SPM,1982,99
+Saint Vincent and the Grenadines,VCT,1970,96
+Samoa,WSM,1950,87.5
+Samoa,WSM,1991,98
+Samoa,WSM,2011,99
+Samoa,WSM,2016,99
+Samoa,WSM,2019,97.99026
+San Marino,SMR,1950,87.5
+San Marino,SMR,2022,100
+Sao Tome and Principe,STP,1950,17.5
+Sao Tome and Principe,STP,1981,57
+Sao Tome and Principe,STP,1991,73
+Sao Tome and Principe,STP,2001,85
+Sao Tome and Principe,STP,2012,90
+Sao Tome and Principe,STP,2019,87.43846
+Saudi Arabia,SAU,1950,3
+Saudi Arabia,SAU,1992,71
+Saudi Arabia,SAU,2000,79
+Saudi Arabia,SAU,2004,83
+Saudi Arabia,SAU,2013,94
+Saudi Arabia,SAU,2017,95
+Saudi Arabia,SAU,2020,98
+Senegal,SEN,1950,3
+Senegal,SEN,1988,27
+Senegal,SEN,2002,39
+Senegal,SEN,2006,42
+Senegal,SEN,2009,48
+Senegal,SEN,2011,52
+Senegal,SEN,2013,44
+Senegal,SEN,2015,43.59273
+Senegal,SEN,2016,46.09964
+Senegal,SEN,2017,52
+Senegal,SEN,2018,46.60591
+Senegal,SEN,2019,46.83367
+Senegal,SEN,2023,50.35582
+Serbia,SRB,2003,96
+Serbia,SRB,2011,98
+Serbia,SRB,2016,99
+Serbia,SRB,2019,99
+Seychelles,SYC,1950,37.5
+Seychelles,SYC,1987,84
+Seychelles,SYC,1994,88
+Seychelles,SYC,2002,92
+Seychelles,SYC,2010,94
+Sierra Leone,SLE,1950,7.5
+Sierra Leone,SLE,2004,35
+Sierra Leone,SLE,2017,44.83318
+Sierra Leone,SLE,2019,43.57778
+Singapore,SGP,1950,47.5
+Singapore,SGP,1980,83
+Singapore,SGP,1990,89
+Singapore,SGP,2000,93
+Singapore,SGP,2010,96
+Singapore,SGP,2011,96
+Singapore,SGP,2012,96
+Singapore,SGP,2013,97
+Singapore,SGP,2014,97
+Singapore,SGP,2015,97
+Singapore,SGP,2016,97
+Singapore,SGP,2017,97
+Singapore,SGP,2018,97
+Singapore,SGP,2019,97
+Singapore,SGP,2020,97
+Singapore,SGP,2021,98
+Slovenia,SVN,1991,100
+Solomon Islands,SLB,1950,7.5
+Solomon Islands,SLB,1999,77
+Somalia,SOM,2022,54
+Somaliland,OWID_SML,1950,3
+South Africa,ZAF,1950,42.5
+South Africa,ZAF,1980,76
+South Africa,ZAF,1996,82
+South Africa,ZAF,2007,89
+South Africa,ZAF,2009,93
+South Africa,ZAF,2010,93
+South Africa,ZAF,2011,93
+South Africa,ZAF,2012,94
+South Africa,ZAF,2014,94
+South Africa,ZAF,2015,94
+South Africa,ZAF,2016,91.73724
+South Africa,ZAF,2017,87
+South Africa,ZAF,2019,95
+South Africa,ZAF,2021,90
+South Asia (WB),,1975,36.03934
+South Asia (WB),,1976,36.04425
+South Asia (WB),,1977,36.69573
+South Asia (WB),,1978,37.34392
+South Asia (WB),,1979,37.98554
+South Asia (WB),,1980,38.5959
+South Asia (WB),,1981,39.17633
+South Asia (WB),,1982,39.82555
+South Asia (WB),,1983,40.47922
+South Asia (WB),,1984,41.1337
+South Asia (WB),,1985,41.78567
+South Asia (WB),,1986,42.44037
+South Asia (WB),,1987,43.09805
+South Asia (WB),,1988,43.84537
+South Asia (WB),,1989,44.61243
+South Asia (WB),,1990,45.35921
+South Asia (WB),,1991,46.08564
+South Asia (WB),,1992,47.08633
+South Asia (WB),,1993,48.08146
+South Asia (WB),,1994,48.84938
+South Asia (WB),,1995,49.64049
+South Asia (WB),,1996,50.4492
+South Asia (WB),,1997,51.26017
+South Asia (WB),,1998,56.07956
+South Asia (WB),,1999,56.87631
+South Asia (WB),,2000,57.65058
+South Asia (WB),,2001,58.41306
+South Asia (WB),,2002,59.20313
+South Asia (WB),,2003,60.09578
+South Asia (WB),,2004,60.87617
+South Asia (WB),,2005,60.67367
+South Asia (WB),,2006,60.84876
+South Asia (WB),,2007,61.68392
+South Asia (WB),,2008,62.5963
+South Asia (WB),,2009,63.45801
+South Asia (WB),,2010,66.02896
+South Asia (WB),,2011,66.62986
+South Asia (WB),,2012,66.67659
+South Asia (WB),,2013,67.70576
+South Asia (WB),,2014,68.45516
+South Asia (WB),,2015,69.78215
+South Asia (WB),,2016,71.10578
+South Asia (WB),,2017,71.66783
+South Asia (WB),,2018,72.19206
+South Asia (WB),,2019,71.96603
+South Asia (WB),,2020,72.68319
+South Asia (WB),,2021,73.47901
+South Asia (WB),,2022,74.26527
+South Asia (WB),,2023,75.00885
+South Korea,KOR,1950,37.5
+South Korea,KOR,2008,98
+South Sudan,SSD,2008,27
+Spain,ESP,1475,3
+Spain,ESP,1550,4
+Spain,ESP,1650,5
+Spain,ESP,1750,8
+Spain,ESP,1900,41.3
+Spain,ESP,1910,47.8
+Spain,ESP,1920,56
+Spain,ESP,1940,76.8
+Spain,ESP,1950,82.5
+Spain,ESP,1981,93
+Spain,ESP,1991,96
+Spain,ESP,2004,97
+Spain,ESP,2005,98
+Spain,ESP,2006,98
+Spain,ESP,2007,98
+Spain,ESP,2008,98
+Spain,ESP,2009,98
+Spain,ESP,2010,98
+Spain,ESP,2011,98
+Spain,ESP,2012,98
+Spain,ESP,2013,98
+Spain,ESP,2014,98
+Spain,ESP,2015,98
+Spain,ESP,2016,98
+Spain,ESP,2018,98
+Spain,ESP,2020,99
+Spain,ESP,2021,100
+Sri Lanka,LKA,1901,26.4
+Sri Lanka,LKA,1911,31
+Sri Lanka,LKA,1921,39.9
+Sri Lanka,LKA,1946,57.8
+Sri Lanka,LKA,1950,62.5
+Sri Lanka,LKA,1981,87
+Sri Lanka,LKA,2001,91
+Sri Lanka,LKA,2006,91
+Sri Lanka,LKA,2008,91
+Sri Lanka,LKA,2010,91
+Sri Lanka,LKA,2016,92
+Sri Lanka,LKA,2017,92
+Sri Lanka,LKA,2018,92
+Sri Lanka,LKA,2019,92
+Sri Lanka,LKA,2020,92
+Sri Lanka,LKA,2021,92
+Sri Lanka,LKA,2022,92
+Sri Lanka,LKA,2023,93
+Sub-Saharan Africa (SDG),,1984,49.00235
+Sub-Saharan Africa (SDG),,1985,49.37137
+Sub-Saharan Africa (SDG),,1986,49.70577
+Sub-Saharan Africa (SDG),,1987,50.36095
+Sub-Saharan Africa (SDG),,1988,50.89607
+Sub-Saharan Africa (SDG),,1989,51.45966
+Sub-Saharan Africa (SDG),,1990,52.11274
+Sub-Saharan Africa (SDG),,1991,52.47592
+Sub-Saharan Africa (SDG),,1992,52.97165
+Sub-Saharan Africa (SDG),,1993,53.5766
+Sub-Saharan Africa (SDG),,1994,54.20362
+Sub-Saharan Africa (SDG),,1995,54.63169
+Sub-Saharan Africa (SDG),,1996,55.26828
+Sub-Saharan Africa (SDG),,1997,56.09558
+Sub-Saharan Africa (SDG),,1998,56.75086
+Sub-Saharan Africa (SDG),,1999,57.59484
+Sub-Saharan Africa (SDG),,2000,56.3906
+Sub-Saharan Africa (SDG),,2001,57.14965
+Sub-Saharan Africa (SDG),,2002,57.85295
+Sub-Saharan Africa (SDG),,2003,58.36514
+Sub-Saharan Africa (SDG),,2004,59.04088
+Sub-Saharan Africa (SDG),,2005,58.71344
+Sub-Saharan Africa (SDG),,2006,58.41726
+Sub-Saharan Africa (SDG),,2007,58.17579
+Sub-Saharan Africa (SDG),,2008,58.48229
+Sub-Saharan Africa (SDG),,2009,58.94138
+Sub-Saharan Africa (SDG),,2010,59.61513
+Sub-Saharan Africa (SDG),,2011,61.13006
+Sub-Saharan Africa (SDG),,2012,62.3788
+Sub-Saharan Africa (SDG),,2013,63.23391
+Sub-Saharan Africa (SDG),,2014,63.92325
+Sub-Saharan Africa (SDG),,2015,64.52015
+Sub-Saharan Africa (SDG),,2016,65.10612
+Sub-Saharan Africa (SDG),,2017,65.44503
+Sub-Saharan Africa (SDG),,2018,67.06734
+Sub-Saharan Africa (SDG),,2019,67.71821
+Sub-Saharan Africa (SDG),,2020,67.9072
+Sub-Saharan Africa (SDG),,2021,67.89861
+Sub-Saharan Africa (SDG),,2022,68.2313
+Sub-Saharan Africa (SDG),,2023,68.5022
+Sub-Saharan Africa (WB),,1985,49.67415
+Sub-Saharan Africa (WB),,1986,49.99505
+Sub-Saharan Africa (WB),,1987,50.62446
+Sub-Saharan Africa (WB),,1988,51.13833
+Sub-Saharan Africa (WB),,1989,51.67959
+Sub-Saharan Africa (WB),,1990,52.30686
+Sub-Saharan Africa (WB),,1991,52.65164
+Sub-Saharan Africa (WB),,1992,53.12544
+Sub-Saharan Africa (WB),,1993,53.7068
+Sub-Saharan Africa (WB),,1994,54.30921
+Sub-Saharan Africa (WB),,1995,54.72155
+Sub-Saharan Africa (WB),,1996,55.37812
+Sub-Saharan Africa (WB),,1997,56.21824
+Sub-Saharan Africa (WB),,1998,56.89161
+Sub-Saharan Africa (WB),,1999,57.74526
+Sub-Saharan Africa (WB),,2000,56.62755
+Sub-Saharan Africa (WB),,2001,57.40014
+Sub-Saharan Africa (WB),,2002,58.11591
+Sub-Saharan Africa (WB),,2003,58.6459
+Sub-Saharan Africa (WB),,2004,59.33332
+Sub-Saharan Africa (WB),,2005,59.05679
+Sub-Saharan Africa (WB),,2006,58.16811
+Sub-Saharan Africa (WB),,2007,57.96338
+Sub-Saharan Africa (WB),,2008,58.28565
+Sub-Saharan Africa (WB),,2009,58.75711
+Sub-Saharan Africa (WB),,2010,59.43254
+Sub-Saharan Africa (WB),,2011,60.91714
+Sub-Saharan Africa (WB),,2012,62.14601
+Sub-Saharan Africa (WB),,2013,62.99641
+Sub-Saharan Africa (WB),,2014,63.68724
+Sub-Saharan Africa (WB),,2015,64.28751
+Sub-Saharan Africa (WB),,2016,64.87826
+Sub-Saharan Africa (WB),,2017,65.2303
+Sub-Saharan Africa (WB),,2018,66.81657
+Sub-Saharan Africa (WB),,2019,67.44165
+Sub-Saharan Africa (WB),,2020,67.62379
+Sub-Saharan Africa (WB),,2021,67.61568
+Sub-Saharan Africa (WB),,2022,67.93573
+Sub-Saharan Africa (WB),,2023,68.19624
+Sudan,SDN,1950,7.5
+Sudan,SDN,2000,61
+Sudan,SDN,2008,54
+Suriname,SUR,1950,72.5
+Suriname,SUR,2004,90
+Suriname,SUR,2008,95
+Suriname,SUR,2010,95
+Suriname,SUR,2012,93
+Sweden,SWE,1475,1
+Sweden,SWE,1550,1
+Sweden,SWE,1650,23
+Sweden,SWE,1750,48
+Sweden,SWE,1950,98.5
+Switzerland,CHE,1950,98.5
+Syria,SYR,1950,27.5
+Syria,SYR,1981,56
+Syria,SYR,2002,83
+Syria,SYR,2004,81
+Syria,SYR,2021,94
+Tajikistan,TJK,1989,98
+Tajikistan,TJK,2000,99
+Tanzania,TZA,1950,7.5
+Tanzania,TZA,1988,59
+Tanzania,TZA,2002,69
+Tanzania,TZA,2012,78
+Tanzania,TZA,2015,78
+Thailand,THA,1950,52.5
+Thailand,THA,1980,88
+Thailand,THA,2000,93
+Thailand,THA,2005,94
+Thailand,THA,2010,96
+Thailand,THA,2013,94
+Thailand,THA,2015,93
+Thailand,THA,2016,91.9814
+Thailand,THA,2018,94
+Thailand,THA,2019,91.26915
+Thailand,THA,2022,91.09987
+Togo,TGO,1950,7.5
+Togo,TGO,2000,53
+Togo,TGO,2006,57
+Togo,TGO,2009,57
+Togo,TGO,2011,60
+Togo,TGO,2015,64
+Togo,TGO,2019,67
+Togo,TGO,2022,72.59589
+Tokelau,TKL,1950,96
+Tonga,TON,1950,92.5
+Tonga,TON,1976,100
+Tonga,TON,1996,99
+Tonga,TON,2006,99
+Tonga,TON,2011,99
+Tonga,TON,2016,97
+Tonga,TON,2019,91.05162
+Trinidad and Tobago,TTO,1950,77.5
+Trinidad and Tobago,TTO,1980,95
+Trinidad and Tobago,TTO,1990,97
+Tunisia,TUN,1950,17.5
+Tunisia,TUN,1984,48
+Tunisia,TUN,2004,74
+Tunisia,TUN,2007,77
+Tunisia,TUN,2008,78
+Tunisia,TUN,2010,79
+Tunisia,TUN,2011,80
+Tunisia,TUN,2012,80
+Tunisia,TUN,2014,79
+Tunisia,TUN,2018,79.47511
+Tunisia,TUN,2019,81
+Tunisia,TUN,2021,83.68263
+Tunisia,TUN,2023,86.24682
+Turkey,TUR,1927,8.2
+Turkey,TUR,1935,20.4
+Turkey,TUR,1945,30.5
+Turkey,TUR,1950,32.5
+Turkey,TUR,1975,62
+Turkey,TUR,1980,66
+Turkey,TUR,1985,76
+Turkey,TUR,1990,79
+Turkey,TUR,2004,87
+Turkey,TUR,2005,88
+Turkey,TUR,2006,88
+Turkey,TUR,2007,89
+Turkey,TUR,2009,91
+Turkey,TUR,2010,93
+Turkey,TUR,2011,94
+Turkey,TUR,2012,95
+Turkey,TUR,2013,95
+Turkey,TUR,2014,95
+Turkey,TUR,2015,96
+Turkey,TUR,2016,96
+Turkey,TUR,2017,96
+Turkey,TUR,2019,97
+Turkey,TUR,2021,97
+Turkmenistan,TKM,1995,99
+USSR,OWID_USS,1950,92.5
+Uganda,UGA,1950,27.5
+Uganda,UGA,1991,56
+Uganda,UGA,2002,68
+Uganda,UGA,2006,71
+Uganda,UGA,2010,73
+Uganda,UGA,2012,70
+Uganda,UGA,2016,69.10132
+Ukraine,UKR,2001,99
+United Arab Emirates,ARE,1975,54
+United Arab Emirates,ARE,1985,71
+United Arab Emirates,ARE,2005,90
+United Arab Emirates,ARE,2019,98
+United Arab Emirates,ARE,2021,98
+United Arab Emirates,ARE,2022,98
+United Arab Emirates,ARE,2023,98
+United Kingdom,GBR,1475,5
+United Kingdom,GBR,1550,16
+United Kingdom,GBR,1650,53
+United Kingdom,GBR,1750,54
+United Kingdom,GBR,1950,98.5
+United States,USA,1900,89.3
+United States,USA,1910,92.3
+United States,USA,1920,94
+United States,USA,1930,95.7
+United States,USA,1940,97.1
+United States,USA,1950,96.5
+United States Virgin Islands,VIR,1950,87.5
+Upper-middle-income countries,,1976,66.26719
+Upper-middle-income countries,,1977,66.49083
+Upper-middle-income countries,,1978,67.51543
+Upper-middle-income countries,,1979,68.63815
+Upper-middle-income countries,,1980,69.66099
+Upper-middle-income countries,,1981,70.64652
+Upper-middle-income countries,,1982,71.57013
+Upper-middle-income countries,,1983,72.50382
+Upper-middle-income countries,,1984,73.58393
+Upper-middle-income countries,,1985,74.485
+Upper-middle-income countries,,1986,75.36734
+Upper-middle-income countries,,1987,76.26551
+Upper-middle-income countries,,1988,79.67043
+Upper-middle-income countries,,1989,80.31058
+Upper-middle-income countries,,1990,81.04114
+Upper-middle-income countries,,1991,81.58651
+Upper-middle-income countries,,1992,82.15758
+Upper-middle-income countries,,1993,82.6979
+Upper-middle-income countries,,1994,83.23142
+Upper-middle-income countries,,1995,83.80124
+Upper-middle-income countries,,1996,84.31269
+Upper-middle-income countries,,1997,88.7168
+Upper-middle-income countries,,1998,89.1177
+Upper-middle-income countries,,1999,89.47645
+Upper-middle-income countries,,2000,89.87667
+Upper-middle-income countries,,2001,90.19642
+Upper-middle-income countries,,2002,90.54139
+Upper-middle-income countries,,2003,90.98183
+Upper-middle-income countries,,2004,91.3237
+Upper-middle-income countries,,2005,91.58416
+Upper-middle-income countries,,2006,91.86817
+Upper-middle-income countries,,2007,92.87729
+Upper-middle-income countries,,2008,93.30886
+Upper-middle-income countries,,2009,93.40503
+Upper-middle-income countries,,2010,93.60919
+Upper-middle-income countries,,2011,93.75011
+Upper-middle-income countries,,2012,93.99739
+Upper-middle-income countries,,2013,94.06516
+Upper-middle-income countries,,2014,94.41684
+Upper-middle-income countries,,2015,94.53935
+Upper-middle-income countries,,2016,94.76116
+Upper-middle-income countries,,2017,94.77168
+Upper-middle-income countries,,2018,94.92602
+Upper-middle-income countries,,2019,95.21391
+Upper-middle-income countries,,2020,95.32048
+Upper-middle-income countries,,2021,95.35308
+Upper-middle-income countries,,2022,95.49537
+Upper-middle-income countries,,2023,95.61952
+Uruguay,URY,1950,82.5
+Uruguay,URY,1975,94
+Uruguay,URY,1985,95
+Uruguay,URY,1996,97
+Uruguay,URY,2006,98
+Uruguay,URY,2007,98
+Uruguay,URY,2008,98
+Uruguay,URY,2009,98
+Uruguay,URY,2010,98
+Uruguay,URY,2011,98
+Uruguay,URY,2012,98
+Uruguay,URY,2013,98
+Uruguay,URY,2014,98
+Uruguay,URY,2015,99
+Uruguay,URY,2016,99
+Uruguay,URY,2017,99
+Uruguay,URY,2018,99
+Uruguay,URY,2019,99
+Uruguay,URY,2022,99
+Uzbekistan,UZB,2000,99
+Uzbekistan,UZB,2013,100
+Uzbekistan,UZB,2014,100
+Uzbekistan,UZB,2015,100
+Uzbekistan,UZB,2016,100
+Uzbekistan,UZB,2018,100
+Uzbekistan,UZB,2019,100
+Uzbekistan,UZB,2021,100
+Uzbekistan,UZB,2022,100
+Vanuatu,VUT,1950,32.5
+Vanuatu,VUT,1979,53
+Vanuatu,VUT,1999,74
+Vanuatu,VUT,2023,87.96032
+Venezuela,VEN,1950,52.5
+Venezuela,VEN,1981,85
+Venezuela,VEN,1990,90
+Venezuela,VEN,2001,93
+Venezuela,VEN,2007,95
+Venezuela,VEN,2009,96
+Venezuela,VEN,2011,95
+Venezuela,VEN,2015,97
+Venezuela,VEN,2016,97
+Vietnam,VNM,1950,17.5
+Vietnam,VNM,1979,84
+Vietnam,VNM,1989,88
+Vietnam,VNM,1999,90
+Vietnam,VNM,2000,90
+Vietnam,VNM,2009,94
+Vietnam,VNM,2019,96
+Vietnam,VNM,2022,96
+Western Europe (Buringh and van Zanden),,1475,12
+Western Europe (Buringh and van Zanden),,1550,18
+Western Europe (Buringh and van Zanden),,1650,25
+Western Europe (Buringh and van Zanden),,1750,31
+World,OWID_WRL,1820,12.046689
+World,OWID_WRL,1870,18.740555
+World,OWID_WRL,1880,19.628456
+World,OWID_WRL,1890,20.516357
+World,OWID_WRL,1900,21.404259
+World,OWID_WRL,1910,26.445602
+World,OWID_WRL,1920,31.623163
+World,OWID_WRL,1930,32.52763
+World,OWID_WRL,1940,41.879223
+World,OWID_WRL,1950,35.959377
+World,OWID_WRL,1960,41.620377
+World,OWID_WRL,1976,65.65894
+World,OWID_WRL,1977,65.94926
+World,OWID_WRL,1978,66.57221
+World,OWID_WRL,1979,67.2339
+World,OWID_WRL,1980,67.8477
+World,OWID_WRL,1981,68.45067
+World,OWID_WRL,1982,69.04228
+World,OWID_WRL,1983,69.61146
+World,OWID_WRL,1984,70.2725
+World,OWID_WRL,1985,70.86449
+World,OWID_WRL,1986,71.41617
+World,OWID_WRL,1987,72.10954
+World,OWID_WRL,1988,73.82419
+World,OWID_WRL,1989,74.34693
+World,OWID_WRL,1990,74.90702
+World,OWID_WRL,1991,75.28651
+World,OWID_WRL,1992,75.69432
+World,OWID_WRL,1993,76.10245
+World,OWID_WRL,1994,76.50147
+World,OWID_WRL,1995,76.91185
+World,OWID_WRL,1996,77.29632
+World,OWID_WRL,1997,79.28844
+World,OWID_WRL,1998,80.4687
+World,OWID_WRL,1999,80.806
+World,OWID_WRL,2000,80.97923
+World,OWID_WRL,2001,81.28601
+World,OWID_WRL,2002,81.64019
+World,OWID_WRL,2003,82.11429
+World,OWID_WRL,2004,82.44728
+World,OWID_WRL,2005,82.45476
+World,OWID_WRL,2006,82.42529
+World,OWID_WRL,2007,83.01185
+World,OWID_WRL,2008,83.38555
+World,OWID_WRL,2009,83.60871
+World,OWID_WRL,2010,84.2272
+World,OWID_WRL,2011,84.41082
+World,OWID_WRL,2012,84.60142
+World,OWID_WRL,2013,84.90313
+World,OWID_WRL,2014,85.28642
+World,OWID_WRL,2015,85.67891
+World,OWID_WRL,2016,86.00014
+World,OWID_WRL,2017,86.17703
+World,OWID_WRL,2018,86.43751
+World,OWID_WRL,2019,86.54794
+World,OWID_WRL,2020,86.74748
+World,OWID_WRL,2021,86.92754
+World,OWID_WRL,2022,87.15536
+World,OWID_WRL,2023,87.35603
+Yemen,YEM,1950,3
+Yemen,YEM,1994,37
+Yugoslavia,OWID_YGS,1931,55.4
+Yugoslavia,OWID_YGS,1948,74.6
+Yugoslavia,OWID_YGS,1950,72.5
+Zambia,ZMB,1950,22.5
+Zambia,ZMB,1990,65
+Zambia,ZMB,1999,68
+Zambia,ZMB,2002,69
+Zambia,ZMB,2010,83
+Zambia,ZMB,2018,71.1323
+Zanzibar,OWID_ZAN,1950,7.5
+Zimbabwe,ZWE,1950,22.5
+Zimbabwe,ZWE,1982,78
+Zimbabwe,ZWE,1992,84
+Zimbabwe,ZWE,2019,93.22755

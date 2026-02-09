@@ -1,0 +1,57 @@
+{
+  "chart": {
+    "title": "Income inequality: Gini coefficient",
+    "subtitle": "The [Gini coefficient](#dod:gini) measures inequality on a scale from 0 to 1. Higher values indicate higher inequality. Depending on the country and year, the data relates to income (measured after taxes and benefits) or to consumption, [per capita](#dod:per-capita).",
+    "note": "",
+    "citation": "World Bank Poverty and Inequality Platform (2025)",
+    "originalChartUrl": "https://ourworldindata.org/grapher/economic-inequality-gini-index?v=1&csvType=full&useColumnShortNames=false",
+    "selection": [
+      "Chile",
+      "Brazil",
+      "South Africa",
+      "United States",
+      "France",
+      "China"
+    ]
+  },
+  "columns": {
+    "Gini coefficient": {
+      "titleShort": "Gini coefficient",
+      "titleLong": "Gini coefficient",
+      "descriptionShort": "The [Gini coefficient](#dod:gini) measures inequality on a scale from 0 to 1. Higher values indicate higher inequality.",
+      "descriptionKey": [
+        "Depending on the country and year, the data refers either to income (after taxes and benefits) or to consumption, [per capita](#dod:per-capita). For most countries, we have only one option available. But when there is a mix of consumption and income data points, we process the data to keep one observation per country and year.",
+        "Regional and global estimates are extrapolated up until the year of the data release using GDP growth estimates and forecasts. For more details about the methodology, please refer to the [World Bank PIP documentation](https://datanalytics.worldbank.org/PIP-Methodology/lineupestimates.html#nowcasts).",
+        "Many people, today and in the past, have no monetary income. This data accounts for this by including the estimated value of non-market income, such as food grown by subsistence farmers for their own use."
+      ],
+      "descriptionProcessing": "For most countries in the dataset, estimates relate to disposable income or consumption, for all available years. Several countries, however, have a mix of income and consumption data points, with both data types sometimes available for particular years.\n\nIn most of our charts, we present the data with some data points dropped to present a single series for each country. This allows us to make readable visualizations that combine multiple countries. In choosing which data points to keep, we strike a balance between maintaining comparability over time and showing as long a time series as possible. As such, the exact approach varies across countries.",
+      "shortUnit": "",
+      "unit": "",
+      "timespan": "1963-2024",
+      "type": "Numeric",
+      "owidVariableId": 1138005,
+      "shortName": "gini__welfare_type_income_or_consumption__table_income_or_consumption_consolidated__survey_comparability_no_spells",
+      "lastUpdated": "2026-01-22",
+      "nextUpdate": "2026-07-21",
+      "citationShort": "World Bank Poverty and Inequality Platform (2025) – with major processing by Our World in Data",
+      "citationLong": "World Bank Poverty and Inequality Platform (2025) – with major processing by Our World in Data. “Gini coefficient – World Bank” [dataset]. World Bank Poverty and Inequality Platform, “World Bank Poverty and Inequality Platform (PIP) 20250930_2021, 20250930_2017” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/1138005.metadata.json"
+    },
+    "World region according to OWID": {
+      "titleShort": "World region according to OWID",
+      "titleLong": "World region according to OWID",
+      "descriptionShort": "Regions defined by Our World in Data, which are used in OWID charts and maps.",
+      "unit": "",
+      "timespan": "2023-2023",
+      "type": "Continent",
+      "owidVariableId": 900801,
+      "shortName": "owid_region",
+      "lastUpdated": "2023-01-01",
+      "citationShort": "Our World in Data – processed by Our World in Data",
+      "citationLong": "Our World in Data – processed by Our World in Data. “World region according to OWID” [dataset]. Our World in Data, “Regions” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/900801.metadata.json"
+    }
+  },
+  "dateDownloaded": "2026-02-06",
+  "activeFilters": {}
+}
