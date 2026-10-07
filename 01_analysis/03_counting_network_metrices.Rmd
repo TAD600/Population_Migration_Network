@@ -1,0 +1,1644 @@
+
+---
+title: "Untitled"
+author: "Author"
+date: "2026-05-04"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+packages <- c("sf", "igraph","ITNr", "wdnet", "dplyr", "plm","ggplot2", "patchwork", "ggraph", "tidygraph", "here", "scales", "ggrepel", "geosphere", "rnaturalearth", "countrycode")
+invisible(lapply(packages, function(pkg) {suppressPackageStartupMessages(library(pkg, character.only = TRUE))}))
+```
+
+```{r}
+m <- read.csv("../data/cleaned/edgelist_stock.csv", header = TRUE, as.is = TRUE, stringsAsFactors = FALSE)
+```
+
+```{r}
+cp_function <- function(m, year) {
+
+  ycol <- paste0("X", year)
+
+  m_y <- m[, c("origin", "destination", ycol)]
+  m_y <- subset(m_y, m_y[[ycol]] > 0)
+
+  net <- igraph::graph_from_data_frame(m_y, directed = TRUE)
+  igraph::E(net)$weight <- igraph::edge_attr(net, ycol)
+
+  cp <- core_periphery_weighted(net, "directed")
+  cp_mat <- cp[[2]]
+  cp_df <- as.data.frame(cp_mat)
+
+  med_sigma_in <- median(cp_df$sigma_in, na.rm = TRUE)
+  med_sigma_out <- median(cp_df$sigma_out, na.rm = TRUE)
+
+  cp_df$median_sigma_in <- med_sigma_in
+  cp_df$median_sigma_out <- med_sigma_out
+
+  cp_df$core_3 <- dplyr::case_when(cp_df$in_cp == 1 ~ 1, cp_df$in_cp == 0 & cp_df$sigma_in > med_sigma_in ~ 2, TRUE ~ 3)
+
+  cp_df$core_4 <- dplyr::case_when(
+    cp_df$sigma_in > med_sigma_in & cp_df$sigma_out <= med_sigma_out ~ "pure_magnet",
+    cp_df$sigma_in <= med_sigma_in & cp_df$sigma_out > med_sigma_out ~ "pure_source",
+    cp_df$sigma_in > med_sigma_in & cp_df$sigma_out > med_sigma_out ~ "transition_hub",
+    TRUE ~ "periphery")
+
+  sigma <- data.frame(country = igraph::V(net)$name, cp_df, year = year)
+
+  return(list(year = year, network = net, sigma = sigma))}
+```
+
+
+```{r}
+years <- 1990:2020
+
+cp_results <- lapply(years, function(y) cp_function(m, y))
+names(cp_results) <- years
+
+cp_data <- dplyr::bind_rows(lapply(cp_results, function(x) x$sigma))
+```
+
+
+```{r}
+dim(cp_data)
+length(unique(cp_data$country))
+length(unique(cp_data$year))
+colnames(cp_data)
+```
+
+```{r}
+# Function to compute weighted centrality measures with four different weights on the edges
+degree_computation <- function(g1, alphas = c(0, 0.5, 0.8, 1)) {
+  results_list <- list()
+  for (a in alphas) {
+    outdeg <- centrality(g1, measure = "degree", degree.control = list(alpha = a, mode = "out"))
+    indeg <- centrality(g1, measure = "degree", degree.control = list(alpha = a, mode = "in"))
+    df <- data.frame(node = g1$node.attr$name , alpha = a, outdegree = outdeg, indegree = indeg)
+    results_list[[paste0("alpha_", a)]] <- df}
+  final_df <- do.call(rbind, results_list)
+  rownames(final_df) <- NULL
+  return(final_df)
+}
+```
+
+```{r}
+# Function to run the centrality measures on igraph objects
+centrality_function <- function(m, year) {
+  ycol <- paste0("X", year)
+  m_y <- m[, c("origin", "destination", ycol)]
+  m_y <- subset(m_y, m_y[[ycol]] > 0)
+  net <- igraph::graph_from_data_frame(m_y, directed = TRUE)
+  igraph::E(net)$weight <- igraph::edge_attr(net, ycol)
+  g <- igraph_to_wdnet(net)
+  deg <- degree_computation(g)
+  deg_df <- deg %>%
+    dplyr::select(-outdegree.name, -indegree.name) %>%
+    dplyr::rename(
+      country = node,
+      out_deg = outdegree.degree,
+      in_deg  = indegree.degree
+    ) %>%
+    dplyr::mutate(year = year)
+  
+  return(deg_df)
+}
+  
+```
+
+```{r}
+# Creating a df with centrality measures
+centrality_results <- lapply(years, function(y) {centrality_function(m, y)})
+
+centrality_data <- dplyr::bind_rows(centrality_results)
+```
+
+```{r}
+dim(centrality_data)
+length(unique(centrality_data$country))
+length(unique(centrality_data$year))
+length(unique(centrality_data$alpha))
+#unique(panel_data["year"])
+colnames(centrality_data)
+```
+
+```{r}
+# Merging the cp data with the centrality data
+merged <- dplyr::left_join(centrality_data, cp_data, by = c("country", "year"))
+```
+
+```{r}
+dim(merged)
+length(unique(merged$country))
+length(unique(merged$year))
+length(unique(merged$alpha))
+colnames(merged)
+```
+
+```{r}
+# Soring the data
+merged <- merged %>% arrange(country, year, alpha)
+
+# Transforming indegree and outdegree measures into log form
+merged <- merged %>% mutate(log_in_deg  = log1p(in_deg),log_out_deg = log1p(out_deg))
+```
+
+```{r}
+# Separating the countries into four categories based on top quantile of indegree, outdegree and median value of in core and out core. Type_hybrid = "pure magnet" if sigma_in is on top of its highest 25% values, sigma_out is equal or below to its highest 25% values, and in_degree centrality is more than its median. 
+# It is "pure source" if sigma_out is within its top 25%, sigma_in is below its lower 75%, and out degree is greater than its median.
+# It is a "hub" if both sigma_in and sigma_out are within their top 25% values. 
+# All other countries are categorized as "periphery"
+
+merged <- merged %>%
+  group_by(year) %>%
+  mutate(
+    q75_in  = quantile(sigma_in,  0.75, na.rm = TRUE),
+    q75_out = quantile(sigma_out, 0.75, na.rm = TRUE),
+    med_in_deg  = median(in_deg,  na.rm = TRUE),
+    med_out_deg = median(out_deg, na.rm = TRUE),
+    
+    type_hybrid = case_when(
+      sigma_in > q75_in & in_deg > med_in_deg & sigma_out <= q75_out ~ "pure_magnet",
+      sigma_out > q75_out & out_deg > med_out_deg & sigma_in <= q75_in ~ "pure_source",
+      sigma_in > q75_in & sigma_out > q75_out ~ "hub",
+      TRUE ~ "periphery"
+    )
+  ) %>%
+  ungroup()
+```
+
+```{r}
+table(merged$type_hybrid[merged$year == 1990])
+table(merged$type_hybrid[merged$year == 2020])
+```
+```{r}
+#unique(merged$country[merged$year == 1990 & merged$type_hybrid == "periphery"])
+
+summary(merged$sigma_in)
+summary(merged$sigma_out)
+summary(merged$in_deg)
+summary(merged$out_deg)
+```
+
+```{r}
+write.csv(merged, "../data/cleaned/network_variables.csv")
+```
+
+
+
+### Making a corridor matrix
+```{r}
+
+make_corridor_matrix <- function(m, cp_data, years) {
+
+  ## Keep origin and destination
+  corridor_matrix <- m[, c("origin", "destination")]
+
+  for (yr in years) {
+
+    ycol <- paste0("X", yr)
+
+    ## Keep only the CP classification for this year
+    cp_year <- cp_data %>%
+      filter(year == yr) %>%
+      select(country, in_cp)
+
+    ## Join origin and destination CP status
+    tmp <- m %>%
+      select(origin, destination) %>%
+      left_join(cp_year,
+                by = c("origin" = "country")) %>%
+      rename(in_cp_origin = in_cp) %>%
+      left_join(cp_year,
+                by = c("destination" = "country")) %>%
+      rename(in_cp_destination = in_cp)
+
+    ## Create corridor variable
+    corridor_matrix[[ycol]] <- case_when(
+      tmp$in_cp_origin == 0 & tmp$in_cp_destination == 0 ~ 1,
+      tmp$in_cp_origin == 1 & tmp$in_cp_destination == 0 ~ 2,
+      tmp$in_cp_origin == 0 & tmp$in_cp_destination == 1 ~ 3,
+      tmp$in_cp_origin == 1 & tmp$in_cp_destination == 1 ~ 4,
+      TRUE ~ NA_real_
+    )
+  }
+
+  return(corridor_matrix)
+}
+```
+
+```{r}
+years <- 1990:2020
+
+corridor_matrix <- make_corridor_matrix(
+  m = m,
+  cp_data = cp_data,
+  years = years
+)
+```
+
+```{r}
+dim(corridor_matrix)
+
+head(corridor_matrix)
+```
+```{r}
+corridor_labels <- c(
+  "1" = "PP",
+  "2" = "CP",
+  "3" = "PC",
+  "4" = "CC"
+)
+```
+
+
+
+
+
+
+
+
+
+
+## Trimming the dataset for the world map
+
+```{r}
+# # Defining a country group having the lowest 5% degree centralities as 'low_node'
+# merged <- merged %>% group_by(year) %>% 
+#   mutate(q05_in  = quantile(in_deg,  0.05, na.rm = TRUE), 
+#          q05_out = quantile(out_deg, 0.05, na.rm = TRUE),
+#     low_node = as.integer(in_deg <= q05_in & out_deg <= q05_out)) %>% ungroup()
+
+# unique(merged$country[merged$year == 2006 & merged$low_node == 1])
+```
+```{r}
+# length(unique(merged$country[merged$year == 2006 & merged$low_node == 1]))
+
+# colnames(merged)
+```
+
+
+
+
+
+### Plotting the networks
+
+```{r}
+nets <- cp_results
+
+nets[["2005"]]$network
+nets[["2005"]]$sigma
+
+net_list <- list( n1990 = nets[["1990"]]$network, n2000 = nets[["2000"]]$network, n2010 = nets[["2010"]]$network, n2020 = nets[["2020"]]$network)
+```
+
+
+```{r}
+# Filtering the networks based on edge weight. I am keeping only the top 5% of the edges. 
+filter_network <- function(g, p = 0.95) {
+  thr <- quantile(E(g)$weight, probs = p, na.rm = TRUE)
+  g <- delete_edges(g, E(g)[weight < thr])
+  g <- delete_vertices(g, V(g)[degree(g) == 0])
+  V(g)$strength <- strength(g, mode = "all", weights = E(g)$weight)
+  return(g)}
+```
+
+```{r}
+nets_filtered <- lapply(net_list, filter_network, p = 0.95)
+```
+
+```{r}
+define_hubs <- function(g) {
+  cutoff <- quantile(V(g)$strength, 0.90, na.rm = TRUE)
+  V(g)$label <- ifelse(V(g)$strength >= cutoff, V(g)$name, NA)
+  return(g)}
+```
+
+```{r}
+nets_filtered <- lapply(nets_filtered, define_hubs)
+
+n1990_f <- nets_filtered[["n1990"]]
+n2000_f <- nets_filtered[["n2000"]]
+n2010_f <- nets_filtered[["n2010"]]
+n2020_f <- nets_filtered[["n2020"]]
+```
+
+```{r}
+add_corridor <- function(g, cp_data, yr) {
+
+  ## Core-periphery classification for one year
+  cp_year <- cp_data %>%
+    filter(year == yr) %>%
+    select(country, in_cp)
+
+  ## Edge list from igraph
+  edges <- igraph::as_data_frame(g, what = "edges")
+
+  ## Join origin CP
+  edges <- edges %>%
+    left_join(cp_year,
+              by = c("from" = "country")) %>%
+    rename(in_cp_origin = in_cp)
+
+  ## Join destination CP
+  edges <- edges %>%
+    left_join(cp_year,
+              by = c("to" = "country")) %>%
+    rename(in_cp_destination = in_cp)
+
+  ## Corridor
+  edges <- edges %>%
+    mutate(
+      corridor = case_when(
+        in_cp_origin == 0 & in_cp_destination == 0 ~ "PP",
+        in_cp_origin == 1 & in_cp_destination == 0 ~ "CP",
+        in_cp_origin == 0 & in_cp_destination == 1 ~ "PC",
+        in_cp_origin == 1 & in_cp_destination == 1 ~ "CC",
+        TRUE ~ NA_character_
+      )
+    )
+
+  return(edges)
+}
+```
+
+```{r}
+edges1990 <- add_corridor(n1990_f, cp_data, 1990)
+edges2000 <- add_corridor(n2000_f, cp_data, 2000)
+edges2010 <- add_corridor(n2010_f, cp_data, 2010)
+edges2020 <- add_corridor(n2020_f, cp_data, 2020)
+```
+
+```{r}
+class(n1990_f)
+methods(as.data.frame)
+```
+
+```{r}
+cp_data$country <- dplyr::recode(
+  cp_data$country,
+  "Russian Federation" = "Russia"
+)
+
+edges1990$from <- dplyr::recode(edges1990$from,
+                                "Russian Federation" = "Russia")
+edges1990$to <- dplyr::recode(edges1990$to,
+                              "Russian Federation" = "Russia")
+
+edges2000$from <- dplyr::recode(edges2000$from,
+                                "Russian Federation" = "Russia")
+edges2000$to <- dplyr::recode(edges2000$to,
+                              "Russian Federation" = "Russia")
+
+edges2010$from <- dplyr::recode(edges2010$from,
+                                "Russian Federation" = "Russia")
+edges2010$to <- dplyr::recode(edges2010$to,
+                              "Russian Federation" = "Russia")
+
+edges2020$from <- dplyr::recode(edges2020$from,
+                                "Russian Federation" = "Russia")
+edges2020$to <- dplyr::recode(edges2020$to,
+                              "Russian Federation" = "Russia")
+```
+
+
+
+```{r}
+############################################################
+## CHUNK 1 : PREPARE THE WORLD MAP (Run only once)
+############################################################
+
+## Read Natural Earth map
+world <- rnaturalearth::ne_countries(
+  scale = "medium",
+  returnclass = "sf"
+)
+
+## Representative point inside each country
+## (better than centroid for plotting labels)
+label_points <- suppressWarnings(
+  sf::st_point_on_surface(world)
+)
+
+coords <- cbind(
+  sf::st_drop_geometry(world),
+  sf::st_coordinates(label_points)
+)
+
+colnames(coords)[colnames(coords) == "X"] <- "lon"
+colnames(coords)[colnames(coords) == "Y"] <- "lat"
+
+## ---------------------------------------------------------
+## Harmonize country names between your data and Natural Earth
+## ---------------------------------------------------------
+
+coords$country <- coords$name
+
+country_lookup <- c(
+
+  "United States" = "United States of America",
+  "Russian Federation" = "Russia",
+  "Czech Republic" = "Czechia",
+  "Korea, Rep." = "South Korea",
+  "Korea, Dem. Rep." = "North Korea",
+  "Slovak Republic" = "Slovakia",
+  "Syrian Arab Republic" = "Syria",
+  "Lao PDR" = "Laos",
+  "Viet Nam" = "Vietnam",
+  "Iran, Islamic Rep." = "Iran",
+  "Egypt, Arab Rep." = "Egypt",
+  "Yemen, Rep." = "Yemen",
+  "Gambia, The" = "Gambia",
+  "Bahamas, The" = "Bahamas",
+  "Kyrgyz Republic" = "Kyrgyzstan",
+  "Brunei Darussalam" = "Brunei",
+  "Congo, Dem. Rep." = "Democratic Republic of the Congo",
+  "Congo, Rep." = "Republic of the Congo",
+  "Venezuela, RB" = "Venezuela",
+  "Micronesia, Fed. Sts." = "Federated States of Micronesia",
+  "St. Lucia" = "Saint Lucia",
+  "St. Vincent and the Grenadines" = "Saint Vincent and the Grenadines",
+  "Antigua and Barbuda" = "Antigua and Barb.",
+  "Eswatini" = "eSwatini",
+  "Türkiye" = "Turkey"
+
+)
+
+## Apply lookup
+coords$country <- dplyr::recode(
+  coords$country,
+  !!!country_lookup
+)
+
+world$country <- world$name
+
+world$country <- dplyr::recode(
+  world$country,
+  !!!country_lookup
+)
+
+## ---------------------------------------------------------
+## Keep only what we need later
+## ---------------------------------------------------------
+
+coords <- coords %>%
+  select(country, lon, lat)
+
+world <- world %>%
+  select(country, geometry)
+
+############################################################
+## Diagnostic:
+############################################################
+
+cat("Countries in map:", nrow(coords), "\n")
+
+cat("Countries in CP data:",
+    length(unique(cp_data$country)),
+    "\n")
+
+cat("Countries in filtered graph:",
+    length(unique(c(edges1990$from, edges1990$to))),
+    "\n")
+
+############################################################
+## Which countries in the graph are NOT found in the map?
+############################################################
+
+setdiff(
+  unique(c(edges1990$from, edges1990$to)),
+  coords$country
+)
+```
+```{r}
+character(0)
+```
+```{r}
+############################################################
+## CHUNK 2 : PREPARE THE DATA FOR ONE YEAR
+############################################################
+
+prepare_world_network <- function(edges,
+                                  cp_data,
+                                  world,
+                                  coords,
+                                  plot_year){
+
+  ##########################################################
+  ## Core-periphery classification
+  ##########################################################
+
+  cp_year <- cp_data %>%
+    filter(year == plot_year) %>%
+    distinct(country, .keep_all = TRUE) %>%
+    select(country, in_cp)
+
+  ##########################################################
+  ## World polygons
+  ##########################################################
+
+  world_plot <- world %>%
+    left_join(cp_year, by = "country") %>%
+    mutate(
+      status = case_when(
+        is.na(in_cp) ~ "Other",
+        in_cp == 1 ~ "Core",
+        TRUE ~ "Periphery"
+      )
+    )
+
+  ##########################################################
+  ## Add coordinates to edge origins
+  ##########################################################
+
+  edge_plot <- edges %>%
+    left_join(
+      coords,
+      by = c("from" = "country")
+    ) %>%
+    rename(
+      lon1 = lon,
+      lat1 = lat
+    )
+
+  ##########################################################
+  ## Add coordinates to edge destinations
+  ##########################################################
+
+  edge_plot <- edge_plot %>%
+    left_join(
+      coords,
+      by = c("to" = "country")
+    ) %>%
+    rename(
+      lon2 = lon,
+      lat2 = lat
+    )
+
+  ##########################################################
+  ## Remove edges without coordinates
+  ##########################################################
+
+  edge_plot <- edge_plot %>%
+    filter(
+      !is.na(lon1),
+      !is.na(lat1),
+      !is.na(lon2),
+      !is.na(lat2)
+    )
+
+  ##########################################################
+  ## Corridor order
+  ##########################################################
+
+  edge_plot$corridor <- factor(
+    edge_plot$corridor,
+    levels = c("PP","CP","PC","CC")
+  )
+
+  ##########################################################
+  ## Labels (countries appearing in the filtered graph)
+  ##########################################################
+
+  labels <- coords %>%
+    semi_join(
+      bind_rows(
+        edge_plot %>% select(country = from),
+        edge_plot %>% select(country = to)
+      ),
+      by = "country"
+    )
+
+  ##########################################################
+
+  list(
+    world = world_plot,
+    labels = labels,
+    edges = edge_plot
+  )
+
+}
+```
+
+
+```{r}
+net1990 <- prepare_world_network(
+  edges1990,
+  cp_data,
+  world,
+  coords,
+  1990
+)
+
+net2000 <- prepare_world_network(
+  edges2000,
+  cp_data,
+  world,
+  coords,
+  2000
+)
+
+net2010 <- prepare_world_network(
+  edges2010,
+  cp_data,
+  world,
+  coords,
+  2010
+)
+
+net2020 <- prepare_world_network(
+  edges2020,
+  cp_data,
+  world,
+  coords,
+  2020
+)
+```
+
+```{r}
+## Create the arc data once for debugging
+
+arc_list <- vector("list", nrow(net1990$edges))
+
+for(i in seq_len(nrow(net1990$edges))){
+
+  inter <- tryCatch(
+    geosphere::gcIntermediate(
+      c(net1990$edges$lon1[i], net1990$edges$lat1[i]),
+      c(net1990$edges$lon2[i], net1990$edges$lat2[i]),
+      n = 80,
+      addStartEnd = TRUE,
+      breakAtDateLine = TRUE
+    ),
+    error = function(e) NULL
+  )
+
+  if(is.null(inter)) next
+
+  if(is.list(inter))
+    inter <- do.call(rbind, inter)
+
+  arc_list[[i]] <- data.frame(
+    lon = inter[,1],
+    lat = inter[,2],
+    group = i,
+    corridor = net1990$edges$corridor[i],
+    weight = net1990$edges$weight[i]
+  )
+}
+
+arcs <- dplyr::bind_rows(arc_list)
+```
+
+```{r}
+head(arcs)
+
+#summary(arcs$weight)
+#table(arcs$corridor)
+nrow(arcs)
+#str(arcs)
+```
+```{r}
+summary(arcs$lon)
+summary(arcs$lat)
+sum(is.na(arcs$lon))
+sum(is.na(arcs$lat))
+range(arcs$weight)
+summary(arcs$weight)
+```
+
+
+
+
+```{r}
+str(net1990)
+```
+```{r}
+head(net1990$edges)
+```
+```{r}
+nrow(net1990$labels)
+
+length(unique(net1990$labels$country))
+
+nrow(net1990$world)
+```
+```{r}
+table(cp_data$in_cp[cp_data$year == 1990])
+```
+```{r}
+arc_split <- split(arcs, arcs$group)
+
+line_geom <- lapply(arc_split, function(x) {
+  st_linestring(as.matrix(x[, c("lon", "lat")]))
+})
+
+edge_sf <- st_sf(
+  corridor = sapply(arc_split, function(x) x$corridor[1]),
+  weight   = sapply(arc_split, function(x) x$weight[1]),
+  geometry = st_sfc(line_geom, crs = 4326)
+)
+```
+
+## Countries
+geom_sf(...)
+
+## Edges
+geom_sf(...)
+
+## Labels
+geom_text(...)
+
+
+```{r}
+##########################################################
+## Build great-circle arcs
+##########################################################
+
+arc_list <- list()
+
+k <- 1
+
+for(i in seq_len(nrow(net$edges))){
+
+  inter <- tryCatch(
+
+    geosphere::gcIntermediate(
+
+      p1 = c(net$edges$lon1[i], net$edges$lat1[i]),
+      p2 = c(net$edges$lon2[i], net$edges$lat2[i]),
+
+      n = 80,
+      addStartEnd = TRUE,
+      breakAtDateLine = TRUE
+
+    ),
+
+    error = function(e) NULL
+
+  )
+
+  ## skip failed edges
+  if(is.null(inter))
+    next
+
+  ########################################################
+  ## Dateline crossing
+  ########################################################
+
+  if(is.list(inter)){
+
+    for(j in seq_along(inter)){
+
+      if(is.null(inter[[j]]))
+        next
+
+      if(nrow(inter[[j]]) < 2)
+        next
+
+      arc_list[[k]] <- list(
+
+        coords = inter[[j]],
+
+        corridor = net$edges$corridor[i],
+
+        weight = net$edges$weight[i]
+
+      )
+
+      k <- k + 1
+
+    }
+
+  }else{
+
+    if(nrow(inter) < 2)
+      next
+
+    arc_list[[k]] <- list(
+
+      coords = inter,
+
+      corridor = net$edges$corridor[i],
+
+      weight = net$edges$weight[i]
+
+    )
+
+    k <- k + 1
+
+  }
+
+}
+```
+
+
+
+```{r}
+p1990 <- plot_world_network(net1990, "1990")
+
+p2000 <- plot_world_network(net2000, "2000")
+
+p2010 <- plot_world_network(net2010, "2010")
+
+p2020 <- plot_world_network(net2020, "2020")
+```
+
+```{r}
+sum(sapply(arc_list, is.null))
+```
+
+```{r}
+arcs <- bind_rows(arc_list)
+```
+
+```{r}
+head(arcs)
+```
+
+```{r}
+table(sapply(arc_list, function(x) is.null(x$coords)))
+```
+
+
+
+
+```{r}
+world$country[grep("Russia", world$country, ignore.case = TRUE)]
+```
+
+```{r}
+unique(cp_data$country[grep("Russia", cp_data$country)])
+```
+```{r}
+country_lookup <- c(
+  "Russian Federation" = "Russia",
+  "United States of America" = "United States of America",
+  "Viet Nam" = "Vietnam",
+  "Iran (Islamic Republic of)" = "Iran",
+  "Syrian Arab Republic" = "Syria",
+  "Republic of Korea" = "South Korea")
+```
+
+```{r}
+cp_data$country <-
+    dplyr::recode(cp_data$country,
+                  !!!country_lookup)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+```{r}
+p1990 <- plot_world_network(
+  edges1990,
+  cp_data,
+  1990,
+  "1990"
+)
+
+p2000 <- plot_world_network(
+  edges2000,
+  cp_data,
+  2000,
+  "2000"
+)
+
+p2010 <- plot_world_network(
+  edges2010,
+  cp_data,
+  2010,
+  "2010"
+)
+
+p2020 <- plot_world_network(
+  edges2020,
+  cp_data,
+  2020,
+  "2020"
+)
+```
+
+
+```{r}
+colnames(edges1990)
+```
+
+
+
+```{r}
+class(n1990_f)
+length(V(n2000_f))
+nrow(cp_results[["2000"]]$sigma)
+```
+For visualization purposes, we use total weighted degree centrality (in+out strength) to capture overall network prominence, while directional centrality measures are reserved for econometric analysis
+
+```{r}
+cp_results[["1990"]]$sigma$in_cp
+```
+
+```{r}
+V(g)$name
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r}
+all_strengths <- unlist(lapply(nets_filtered, function(g) strength(g, mode = "in", weights = E(g)$weight)))
+all_weights   <- unlist(lapply(nets_filtered, function(g) E(g)$weight))
+```
+
+
+
+
+
+```{r}
+plot_network <- function(g, year, cp_results, title_text) {
+
+  # Retrieve CP classification for this year
+  sigma <- cp_results[[as.character(year)]]$sigma
+
+  # Match countries in the filtered graph to sigma dataframe
+  V(g)$in_cp <- sigma$in_cp[match(V(g)$name, sigma$country)]
+  # Label only core countries
+  V(g)$label <- ifelse(V(g)$in_cp == 1,V(g)$name,NA)
+
+  ggraph(g, layout = "on_sphere") +
+    geom_edge_link(aes(width = weight),alpha = 0.1,show.legend = FALSE) +
+    geom_node_point(aes(size = strength,color = factor(in_cp)),alpha = 0.8,show.legend = FALSE) +
+    geom_node_text(aes(label = label),repel = TRUE,size = 3,na.rm = TRUE) +
+    scale_color_manual(values = c(
+        "0" = "#9fc5e8",     
+        "1" = "#c9733b")) +
+    scale_size(range = c(0.6, 6),limits = range(all_strengths)) +
+    scale_edge_width(range = c(0.1, 1.5),limits = range(all_weights)) +
+    ggtitle(title_text) +
+    theme_void() +
+    theme(plot.title = element_text(hjust = 0.5,face = "bold"),legend.position = "none")
+}
+```
+
+```{r}
+library(rnaturalearth)
+
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+head(world[, c("name", "iso_a3")])
+```
+
+
+
+
+
+
+```{r}
+plot_world_network <- function(g,
+                               year,
+                               cp_results,
+                               title_text,
+                               all_strengths,
+                               all_weights){
+
+  ##------------------------------------------
+  ## Core-periphery classification
+  ##------------------------------------------
+
+  sigma <- cp_results[[as.character(year)]]$sigma
+
+  V(g)$in_cp <- sigma$in_cp[
+    match(V(g)$name, sigma$country)
+  ]
+
+  V(g)$label <- ifelse(
+    V(g)$in_cp == 1,
+    V(g)$name,
+    NA
+  )
+
+  ##------------------------------------------
+  ## Node dataframe
+  ##------------------------------------------
+
+  nodes <- data.frame(
+    country  = V(g)$name,
+    strength = V(g)$strength,
+    in_cp    = V(g)$in_cp,
+    label    = V(g)$label,
+    stringsAsFactors = FALSE
+  )
+
+  ##------------------------------------------
+  ## World map
+  ##------------------------------------------
+
+  world <- rnaturalearth::ne_countries(
+    scale = "medium",
+    returnclass = "sf"
+  )
+  
+  
+
+  world$iso3 <- world$iso_a3
+
+  nodes$iso3 <- countrycode(
+    nodes$country,
+    origin = "country.name",
+    destination = "iso3c"
+  )
+
+  coords <-
+    world |>
+    sf::st_point_on_surface()
+
+  coords <- data.frame(
+    iso3 = world$iso3,
+    st_coordinates(centroids)
+  )
+
+  names(coords)[2:3] <- c("lon","lat")
+
+  nodes <- left_join(nodes,
+                     coords,
+                     by = "iso3")
+
+  ##------------------------------------------
+  ## Edge dataframe
+  ##------------------------------------------
+
+  edges <- igraph::as_data_frame(g, what = "edges")
+
+  edges <- edges |>
+    left_join(nodes |> select(country, lon, lat),
+              by = c("from" = "country")) |>
+    rename(lon1 = lon,
+           lat1 = lat)
+
+  edges <- edges |>
+    left_join(nodes |> select(country, lon, lat),
+              by = c("to" = "country")) |>
+    rename(lon2 = lon,
+           lat2 = lat)
+
+  ##------------------------------------------
+  ## Great-circle paths
+  ##------------------------------------------
+
+  edge_paths <- lapply(seq_len(nrow(edges)), function(i){
+
+    if(any(is.na(edges[i,c("lon1","lat1","lon2","lat2")])))
+      return(NULL)
+
+    gc <- geosphere::gcIntermediate(
+      c(edges$lon1[i], edges$lat1[i]),
+      c(edges$lon2[i], edges$lat2[i]),
+      n = 80,
+      addStartEnd = TRUE,
+      sp = FALSE
+    )
+
+    data.frame(
+      lon = gc[,1],
+      lat = gc[,2],
+      id = i,
+      weight = edges$weight[i]
+    )
+
+  })
+
+  edge_paths <- bind_rows(edge_paths)
+
+  ##------------------------------------------
+  ## Plot
+  ##------------------------------------------
+
+  ggplot() +
+
+    geom_sf(
+      data = world,
+      fill = "grey96",
+      colour = "grey75",
+      linewidth = 0.2
+    ) +
+
+    geom_path(
+      data = edge_paths,
+      aes(lon,
+          lat,
+          group = id,
+          linewidth = weight),
+      colour = "grey45",
+      alpha = 0.20,
+      lineend = "round"
+    ) +
+
+    geom_point(
+      data = nodes,
+      aes(lon,
+          lat,
+          size = strength,
+          fill = factor(in_cp)),
+      shape = 21,
+      colour = "black",
+      stroke = .25,
+      alpha = .90
+    ) +
+
+    ggrepel::geom_text_repel(
+      data = subset(nodes, !is.na(label)),
+      aes(lon,
+          lat,
+          label = label),
+      size = 3,
+      max.overlaps = Inf
+    ) +
+
+    scale_fill_manual(values = c(
+      "0" = "#9fc5e8",
+      "1" = "#c9733b"
+    )) +
+
+    scale_size(
+      range = c(0.6,6),
+      limits = range(all_strengths)
+    ) +
+
+    scale_linewidth(
+      range = c(0.1,1.5),
+      limits = range(all_weights)
+    ) +
+
+    coord_sf(expand = FALSE) +
+
+    ggtitle(title_text) +
+
+    theme_void() +
+
+    theme(
+      plot.title = element_text(
+        hjust = .5,
+        face = "bold"
+      ),
+      legend.position = "none"
+    )
+
+}
+```
+
+```{r}
+p1990 <- plot_world_network(
+  n1990_f,
+  year = 1990,
+  cp_results = cp_results,
+  title_text = "1990",
+  all_strengths = all_strengths,
+  all_weights = all_weights
+)
+
+p2000 <- plot_world_network(
+  n2000_f,
+  2000,
+  cp_results,
+  "2000",
+  all_strengths,
+  all_weights
+)
+
+p2010 <- plot_world_network(
+  n2010_f,
+  2010,
+  cp_results,
+  "2010",
+  all_strengths,
+  all_weights
+)
+
+p2020 <- plot_world_network(
+  n2020_f,
+  2020,
+  cp_results,
+  "2020",
+  all_strengths,
+  all_weights
+)
+```
+```{r}
+p2020
+```
+
+
+
+
+
+
+
+
+```{r}
+#find.package("rnaturalearth", quiet = TRUE)
+#installed.packages()[c("rnaturalearth","rnaturalearthdata"), c("Package","Version")]
+```
+
+```{r}
+install.packages("rnaturalearthdata", repos = "https://cloud.r-project.org", dependencies = TRUE)
+```
+```{r}
+.rs.restartR()
+```
+
+```{r}
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(sf)
+library(countrycode)
+library(geosphere)
+```
+```{r}
+world <- rnaturalearth::ne_countries(
+    scale = "medium",
+    returnclass = "sf"
+)
+
+plot(sf::st_geometry(world))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r}
+library(igraph)
+library(ggraph)
+library(ggplot2)
+
+plot_network <- function(g, year, cp_results, title_text, all_strengths, all_weights,
+                         r_core = 0.05, r_min = 0.3, r_max = 1) {
+
+  sigma_df <- cp_results[[as.character(year)]]$sigma
+  V(g)$in_cp <- sigma_df$in_cp[match(V(g)$name, sigma_df$country)]
+  # if sigma_in column name differs, change below:
+  sigma_in <- sigma_df$sigma_in[match(V(g)$name, sigma_df$country)]
+
+  # fallback if sigma_in missing
+  if (is.null(sigma_in)) sigma_in <- rep(0, vcount(g))
+
+  V(g)$label <- ifelse(V(g)$in_cp == 1, V(g)$name, NA)
+
+  # scale sigma_in 0..1
+  s_scaled <- (sigma_in - min(sigma_in, na.rm = TRUE)) /
+              (diff(range(sigma_in, na.rm = TRUE)) + .Machine$double.eps)
+
+  # radius: cores near center, peripherals mapped by sigma_in
+  radius <- ifelse(V(g)$in_cp == 1,
+                   runif(sum(V(g)$in_cp == 1), 0, r_core),         # small jitter for cores
+                   r_min + s_scaled * (r_max - r_min))
+
+  # angles
+  theta <- runif(vcount(g), 0, 2 * pi)
+
+  coords <- data.frame(x = radius * cos(theta),
+                       y = radius * sin(theta),
+                       name = V(g)$name)
+
+  # create manual layout so ggraph uses these coords in correct order
+  layout <- create_layout(g, layout = "manual", x = coords$x, y = coords$y)
+
+  ggraph(layout) +
+    geom_edge_link(aes(width = weight), alpha = 0.12, show.legend = FALSE) +
+    geom_node_point(aes(size = strength, color = factor(in_cp)), alpha = 0.9, show.legend = FALSE) +
+    geom_node_text(aes(label = label), repel = TRUE, size = 3, na.rm = TRUE) +
+    scale_color_manual(values = c("0" = "grey70", "1" = "#1F4E79")) +
+    scale_size(range = c(0.6, 6), limits = range(all_strengths)) +
+    scale_edge_width(range = c(0.1, 1.5), limits = range(all_weights)) +
+    ggtitle(title_text) +
+    theme_void() +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold"),
+          legend.position = "none")
+}
+
+```
+
+```{r}
+# plot_network <- function(g, year, cp_results, title_text) {
+# 
+#   # Retrieve CP results for the year
+#   sigma <- cp_results[[as.character(year)]]$sigma
+# 
+#   # Match CP measures to network vertices
+#   V(g)$in_cp <- sigma$in_cp[
+#     match(V(g)$name, sigma$country)
+#   ]
+# 
+#   V(g)$sigma_in <- sigma$sigma_in[
+#     match(V(g)$name, sigma$country)
+#   ]
+# 
+#   # Strength
+#   V(g)$strength <- strength(
+#     g,
+#     mode = "all",
+#     weights = E(g)$weight
+#   )
+# 
+#   # Label only core countries
+#   V(g)$label <- ifelse(
+#     V(g)$in_cp == 1,
+#     V(g)$name,
+#     NA
+#   )
+# 
+#   # Continuous coreness → radius (higher sigma = closer center)
+#   coreness <- V(g)$sigma_in
+# 
+#   radius <- scales::rescale(
+#     1 - coreness,
+#     to = c(0.05, 1)
+#   )
+# 
+#   # Spread nodes around the circle
+#   theta <- seq(
+#     0,
+#     2 * pi,
+#     length.out = vcount(g) + 1
+#   )[-(vcount(g) + 1)]
+# 
+#   coords <- cbind(
+#     radius * cos(theta),
+#     radius * sin(theta)
+#   )
+# 
+#   # Plot
+#   ggraph(
+#     g,
+#     layout = "manual",
+#     x = coords[, 1],
+#     y = coords[, 2]
+#   ) +
+# 
+#     geom_edge_link(
+#       aes(width = weight),
+#       alpha = 0.08,
+#       colour = "grey60",
+#       show.legend = FALSE
+#     ) +
+# 
+#     geom_node_point(
+#       aes(
+#         size = sigma_in,
+#         color = factor(in_cp)
+#       ),
+#       alpha = 0.85,
+#       show.legend = FALSE
+#     ) +
+# 
+#     geom_node_text(
+#       aes(label = label),
+#       repel = TRUE,
+#       size = 3,
+#       na.rm = TRUE
+#     ) +
+# 
+#     scale_color_manual(
+#       values = c(
+#         "0" = "grey70",
+#         "1" = "#1F4E79"
+#       )
+#     ) +
+# 
+#     scale_size_continuous(
+#       range = c(2, 12),
+#       trans = "sqrt"
+#     ) +
+# 
+#     scale_edge_width(
+#       range = c(0.1, 1.5)
+#     ) +
+# 
+#     ggtitle(title_text) +
+# 
+#     theme_void() +
+# 
+#     theme(
+#       plot.title = element_text(
+#         hjust = 0.5,
+#         face = "bold",
+#         size = 12
+#       ),
+#       legend.position = "none"
+#     )
+# }
+```
+
+
+```{r}
+# compute node strengths for this graph (used inside plotting too)
+strengths_1990 <- strength(n1990_f, weights = E(n1990_f)$weight)
+
+# if you want global ranges across multiple years, combine them; otherwise use per-year:
+all_strengths <- strengths_1990           # or c(strengths_1990, strengths_1991, ...)
+all_weights <- E(n1990_f)$weight          # or c(E(g1)$weight, E(g2)$weight, ...)
+
+# call with defaults for radii
+p1990 <- plot_network(n1990_f,
+                      year = 1990,
+                      cp_results = cp_results,
+                      title_text = "1990",
+                      all_strengths = all_strengths,
+                      all_weights = all_weights)
+
+# example with custom radii
+p1990b <- plot_network(n1990_f, 1990, cp_results, "1990",
+                       all_strengths, all_weights,
+                       r_core = 0.02, r_min = 0.25, r_max = 1.2)
+
+```
+
+
+
+```{r}
+p1990
+```
+
+
+```{r}
+p1990b
+```
+
+
+
+
+
+
+```{r}
+p1990 <- plot_network(n1990_f,year = 1990,cp_results = cp_results,title_text = "1990")
+p2000 <- plot_network(n2000_f,year = 2000,cp_results = cp_results,title_text = "2000")
+p2010 <- plot_network(n2010_f,year = 2010,cp_results = cp_results,title_text = "2010")
+p2020 <- plot_network(n2020_f,year = 2020,cp_results = cp_results,title_text = "2020")
+```
+
+```{r}
+p1990 
+```
+```{r}
+p2020
+```
+```{r}
+sigma2020 <- cp_results[["2020"]]$sigma
+
+sigma2020[
+  sigma2020$country %in% c(
+    "Ukraine",
+    "United States of America",
+    "Germany",
+    "France",
+    "India",
+    "United Kingdom"
+  ),
+  c("country", "sigma_in", "in_cp")
+]
+```
+
+
+
+
+
+```{r}
+p_footer <- ggplot(data.frame(x = c(1,2,3,4),y = c(1,1,1,1),cp = c("Core","Periphery","Core","Periphery"),strength = c(1e6,1e6,5e6,5e6)),
+  aes(x = x, y = y)) +
+  geom_point(aes(color = cp, size = strength),alpha = 0) +
+  scale_color_manual(values = c("Core" = "#1F4E79","Periphery" = "grey70"),name = "Position:") +
+  scale_size(range = c(0.6, 6),limits = range(all_strengths),name = "Node Strength:",labels = scales::label_number(scale_cut = scales::cut_short_scale())) +
+  theme_void() +
+  guides(color = guide_legend(nrow = 1,order = 1,override.aes = list(alpha = 0.8,size = 5)),
+    size = guide_legend(nrow = 1,order = 2,override.aes = list(alpha = 0.8,color = "grey40"))) +
+  theme(
+    legend.position = "bottom",
+    legend.box = "horizontal",
+    legend.direction = "horizontal",
+    legend.title = element_text(size = 10, face = "bold"),
+    legend.text = element_text(size = 10),
+    legend.spacing.x = unit(1.5, "cm"),
+    legend.box.spacing = unit(0.1, "cm")
+  )
+
+```
+
+```{r}
+network_grid <- wrap_plots(
+  p1990 + ggtitle("1990"),
+  p2000 + ggtitle("2000"),
+  p2010 + ggtitle("2010"),
+  p2020 + ggtitle("2020"),
+  ncol = 2
+)
+```
+
+
+
+```{r}
+exists("network_grid")
+exists("p_footer")
+exists("p1990")
+exists("p2000")
+exists("p2010")
+exists("p2020")
+```
+```{r}
+figure2 <- network_grid /
+  p_footer +
+  plot_layout(heights = c(12, 1))
+
+figure2
+```
+Blue nodes indicate core countries identified by the weighted core–periphery algorithm; gray nodes indicate peripheral countries. Node size is proportional to weighted degree centrality. Only the strongest migration corridors (top 5% of edge weights) are displayed.
+```{r}
+class(p1990)
+class(p2000)
+class(p2010)
+class(p2020)
+```
+
+
+```{r}
+ggsave("../outputs/Fig3.tiff",figure2,width = 12,height = 12,dpi = 600)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
