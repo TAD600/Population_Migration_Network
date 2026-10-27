@@ -3,8 +3,10 @@
 
 **** Making lagged variables, and regression models start from line 215
 
-***Based on the path you clone this repository, change the following code:***
-import delimited "D:\project2025\mig_net\Population_Migration_Network\data\cleaned\panel_migration.csv"
+***Based on the path you clone this repository, set repository root***
+global root "D:/project2025/mig_net/Population_Migration_Network"
+
+import delimited "$root/data/cleaned/panel_migration.csv"
 *It takes 2 minutes to load
 
 
@@ -342,8 +344,8 @@ label variable int_lfp_distance_iv "IV for L.lfp distance and migration stock in
 tab corridor
 codebook corridor
 label variable corridor "1= PP, 2 = CP, 3 = PC, 4 = CC"
-graph bar (mean) lnstock if year == 1990, over(corridor)
-graph bar (mean) lnstock if year == 2010, over(corridor)
+//graph bar (mean) lnstock if year == 1990, over(corridor)
+//graph bar (mean) lnstock if year == 2010, over(corridor)
 
 
 ********sanity check
@@ -358,15 +360,33 @@ distinct origin if year == 2019
 
 //saving a .dta file for regression analysis 
 ***** Based on the path you cloned this repository, change the following code" 
-save "D:\project2025\mig_net\Population_Migration_Network\data\cleaned\panel_complete.dta", replace
+save "$root/data/cleaned/panel_complete.dta", replace
 
 
 preserve
 collapse (mean) lnstock, by(year corridor)
 reshape wide lnstock, i(year) j(corridor)
-graph bar lnstock1 lnstock2 lnstock3 lnstock4, over(year, label(labsize(vsmall) angle(45))) stack bar(1, color("brown")) bar(2, color("sand")) bar(3, color("eltblue")) bar(4, color("bluishgray")) ytitle("Mean lnstock", size(small)) ylabel(0(10)30, labsize(vsmall)) legend(order(1 "Periphery-periphery" 2 "Core-periphery" 3 "Periphery-core" 4 "Core-core") position(6) rows(1) size(small))
 
-graph export "D:\project2025\mig_net\Population_Migration_Network\outputs\Fig2.tif", as(tif) name("Graph")
+// graph bar lnstock1 lnstock2 lnstock3 lnstock4, over(year, label(labsize(vsmall) angle(45))) stack bar(1, color("brown")) bar(2, color("sand")) bar(3, color("eltblue")) bar(4, color("bluishgray")) ytitle("Mean lnstock", size(small)) ylabel(0(10)30, labsize(vsmall)) legend(order(1 "Periphery-periphery" 2 "Core-periphery" 3 "Periphery-core" 4 "Core-core") position(6) rows(1) size(small))
+
+egen total_lnstock = rowtotal(lnstock1 lnstock2 lnstock3 lnstock4)
+
+foreach v of numlist 1/4 {
+    gen pct`v' = 100*lnstock`v'/total_lnstock if total_lnstock != 0
+}
+
+// Stacked baar chart with no percentage mentioned 
+//graph bar (asis) pct1 pct2 pct3 pct4, over(year, label(labsize(vsmall) angle(45))) stack bar(1, color("brown")) bar(2, color("sand")) bar(3, color("eltblue")) bar(4, color("bluishgray")) ytitle("Share of total (%)", size(small)) ylabel(0(20)100, labsize(vsmall)) legend(order(1 "Periphery-periphery" 2 "Core-periphery" 3 "Periphery-core" 4 "Core-core") position(6) rows(1) size(small))
+		   
+// Stacked baar chart with percentage mentioned 		   
+graph bar (asis) pct1 pct2 pct3 pct4, over(year, label(labsize(vsmall) angle(45))) stack bar(1, color("brown")) bar(2, color("sand")) bar(3, color("eltblue")) bar(4, color("bluishgray")) blabel(bar, position(center) format(%4.1f) size(vsmall) color(black)) ytitle("Share of total (%)", size(vsmall)) ylabel(0(20)100, labsize(vsmall)) legend(order(1 "Periphery-periphery" 2 "Core-periphery" 3 "Periphery-core" 4 "Core-core") position(6) rows(1) size(vsmall))
+		   
+		   		   
+// Stacked baar chart with percentage mentioned (Horizontal)
+//graph bar (asis) pct1 pct2 pct3 pct4, over(year, label(labsize(vsmall))) stack horizontal bar(1, color("brown")) bar(2, color("sand")) bar(3, color("eltblue")) bar(4, color("bluishgray")) blabel(bar, position(center) format(%4.1f) size(vsmall) color(black)) ylabel(, labsize(vsmall)) legend(order(1 "Periphery-periphery" 2 "Core-periphery" 3 "Periphery-core" 4 "Core-core") position(6) rows(1) size(small))
+		   
+*** The following code will run only when the Graph window is kept open.		   
+graph export "$root/outputs/Fig2.tif", as(tif) name("Graph")
 restore
 
 
