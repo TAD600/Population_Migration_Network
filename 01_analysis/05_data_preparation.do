@@ -364,13 +364,29 @@ save "$root/data/cleaned/panel_complete.dta", replace
 
 
 preserve
+collapse (mean) stock_million, by(year corridor)
+reshape wide stock_million, i(year) j(corridor)
+egen total_stock = rowtotal(stock_million1 stock_million2 stock_million3 stock_million4)
+foreach v of numlist 1/4 {
+    gen pct`v' = 100*stock_million`v'/total_stock if total_stock != 0
+}
+
+graph bar (asis) pct1 pct2 pct3 pct4, over(year, label(labsize(vsmall) angle(45))) stack bar(1, color("brown")) bar(2, color("sand")) bar(3, color("eltblue")) bar(4, color("bluishgray")) blabel(bar, position(center) format(%4.1f) size(vsmall) color(black)) ytitle("Share of total (%)", size(vsmall)) ylabel(0(20)100, labsize(vsmall)) legend(order(1 "Periphery-periphery" 2 "Core-periphery" 3 "Periphery-core" 4 "Core-core") position(6) rows(1) size(vsmall))
+
+
+
+
 collapse (mean) lnstock, by(year corridor)
 reshape wide lnstock, i(year) j(corridor)
 
+graph bar stock_million, over(year, label(angle(45) labsize(vsmall))) ///
+    over(corridor) ///
+    ytitle("Average migrant stock (millions)") ///
+    title("Average Migrant Stock by Corridor Type Over Time") ///
+    legend(off)
 // graph bar lnstock1 lnstock2 lnstock3 lnstock4, over(year, label(labsize(vsmall) angle(45))) stack bar(1, color("brown")) bar(2, color("sand")) bar(3, color("eltblue")) bar(4, color("bluishgray")) ytitle("Mean lnstock", size(small)) ylabel(0(10)30, labsize(vsmall)) legend(order(1 "Periphery-periphery" 2 "Core-periphery" 3 "Periphery-core" 4 "Core-core") position(6) rows(1) size(small))
 
 egen total_lnstock = rowtotal(lnstock1 lnstock2 lnstock3 lnstock4)
-
 foreach v of numlist 1/4 {
     gen pct`v' = 100*lnstock`v'/total_lnstock if total_lnstock != 0
 }
