@@ -28,6 +28,6 @@ flowchart LR
     J -->|saves outputs|K[outputs]
     J --> |saves csv files|D
     D --> L[01_analysis\n/07_plots.Rmd]
-    L --> |saves figures to|K
-    K --> M((END))
+    L --> |saves figures to|I
+    I --> M((END))
 ```
