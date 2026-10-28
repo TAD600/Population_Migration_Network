@@ -8,9 +8,23 @@ The following mermaid plot illustrates the data journey,
 
 
 ```mermaid
-flowchart TD
-    A((Start)) --> B[01_preparing]
-    B -->|Uses data from| C[(data/raw)]
-    B -->|Saves cleaned data to| D[(data/cleaned)]
-    D --> |Uses data to conduct analysis| B[01_preparing]
-    B -->|saves plots|E[outputs]
+flowchart LR
+    A((START)) --> B[01_analysis/01_preparing_attributes.ipynb]
+    B --> |Uses data from| C[(data/raw)]
+    B --> |Saves cleaned data to| D[(data/cleaned)]
+    D --> E[01_analysis/02_trimming.ipynb]
+    E --> |trims the dataset|D
+    D --> F[01_analysis/03_counting_network_metrices.Rmd]
+    F --> |generates network variables|D
+    D --> G[01_analysis/04_merging_panel_data.ipynb]
+    G --> |merges the network\n variables with\n other attributes|D
+    D --> H[01_analysis/05_data_preparation.do]
+    H --> |prepared dta file\n for regressions|D
+    H --> |saves figure 2|I[outputs]
+    D --> |runs regressions|J[01_analysis/06_analysis.do]
+    J -->|saves outputs|K[outputs]
+    J --> |saves csv files|D
+    D --> L[01_analysis/07_plots.Rmd]
+    L --> |saves figures to|K
+    K --> M((END))
+```
