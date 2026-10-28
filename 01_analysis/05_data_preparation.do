@@ -1,7 +1,6 @@
 
 // Bilateral migration datasource: https://data.mendeley.com/datasets/cpt3nh6jct/1
-
-**** Making lagged variables, and regression models start from line 215
+// This do file prepares a dta file for regression analysis which is used in 06_analysis.do
 
 ***Based on the path you clone this repository, set repository root***
 global root "D:/project2025/mig_net/Population_Migration_Network"
