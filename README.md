@@ -25,7 +25,7 @@ flowchart LR
     H --> |prepared dta file\n for regressions|D
     H --> |saves figure 2|I[outputs]
     D --> |runs regressions|J[01_analysis\n/06_analysis.do]
-    J -->|saves outputs|K[outputs]
+    J -->|saves outputs|I[outputs]
     J --> |saves csv files|D
     D --> L[01_analysis\n/07_plots.Rmd]
     L --> |saves figures to|I
